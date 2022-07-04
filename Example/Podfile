@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MARSDK_EPSDK_Tests' do
+  pod 'MARSDK_EPSDK', :path => '../'
+  
+  
+end
