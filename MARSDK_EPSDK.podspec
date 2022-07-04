@@ -1,42 +1,23 @@
-#
-# Be sure to run `pod lib lint MARSDK_EPSDK.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
 
 Pod::Spec.new do |s|
   s.name             = 'MARSDK_EPSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MARSDK_EPSDK.'
+  s.summary          = '火星人打包工具'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+火星人打包工具sdk 
                        DESC
 
-  s.homepage         = 'https://github.com/izhigang6@163.com/MARSDK_EPSDK'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/izhigang6@163.com/MARSDK_EPSDK.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'izhigang6@163.com' => 'lizhigang6@163.com' }
   s.source           = { :git => 'https://github.com/izhigang6@163.com/MARSDK_EPSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'MARSDK_EPSDK/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MARSDK_EPSDK' => ['MARSDK_EPSDK/Assets/*.png']
-  # }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }  
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

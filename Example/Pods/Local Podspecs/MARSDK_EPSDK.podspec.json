@@ -1,0 +1,22 @@
+{
+  "name": "MARSDK_EPSDK",
+  "version": "0.1.0",
+  "summary": "A short description of MARSDK_EPSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/izhigang6@163.com/MARSDK_EPSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "izhigang6@163.com": "lizhigang6@163.com"
+  },
+  "source": {
+    "git": "https://github.com/izhigang6@163.com/MARSDK_EPSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MARSDK_EPSDK/Classes/**/*"
+}
