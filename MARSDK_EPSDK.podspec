@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author           = { 'izhigang6@163.com' => 'lizhigang6@163.com' }
   s.source           = { :git => 'https://github.com/izhigang6@163.com/MARSDK_EPSDK.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
-  s.vendored_frameworks =  'MARSDK_EPSDK.git/SDK/*'
+  s.vendored_frameworks =  'MARSDK_EPSDK/SDK/*'
   s.frameworks = "Security","SystemConfiguration"
 
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }  
