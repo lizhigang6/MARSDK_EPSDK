@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MARSDK_EPSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '火星人打包工具'
 
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
 
   s.frameworks = "Security","SystemConfiguration"
- s.libraries = "libz.tbd","libc++.tbd","libicucore.tbd"
+  s.libraries = "libz.tbd","libc++.tbd","libicucore.tbd"
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }  
 
 end
