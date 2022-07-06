@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'MARSDK_EPSDK'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '广告渠道配合marsdk 使用'
   s.description  = <<-DESC
 火星人打包工具sdk 
@@ -13,7 +13,13 @@ s.author           = { '名字' => 'lizhigang6@163.com' } #作者信息：账户
 s.source           = { :git => 'https://github.com/lizhigang6/MARSDK_EPSDK.git', :tag => s.version.to_s } # 这里输入邮箱如果你在开元中国申请的 git 账号,那么把你在开元中国创建的项目的 https 网址输入到这里,
 s.platform     = :ios
 s.platform     = :ios, "10.0" #iOS 支持的最低级别,这里最低9.0
-s.vendored_frameworks  = 'MARSDK_EPSDK/SDK/*' 
+s.resource_bundles = {
+     'EPSDKResources' => ['MARSDK_EPSDK/Assets/*']
+ }
+s.vendored_libraries =  'MARSDK_EPSDK/SDK/libMARSDK_EPSDK.a'
+s.vendored_frameworks  = 'MARSDK_EPSDK/Classes/EPSDK.framework' 
+s.frameworks = "Security","SystemConfiguration"
+s.ios.library = "libicucore","z","c++"  
 
 s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 end
