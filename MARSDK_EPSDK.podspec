@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'MARSDK_EPSDK'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = '广告渠道配合marsdk 使用'
   s.description  = <<-DESC
 火星人打包工具sdk 
@@ -17,7 +17,7 @@ s.resource_bundles = {
      'EPSDKResources' => ['MARSDK_EPSDK/Assets/*']
  }
 s.vendored_libraries =  'MARSDK_EPSDK/SDK/libMARSDK_EPSDK.a'
-s.vendored_frameworks  = 'MARSDK_EPSDK/Classes/EPSDK.framework' 
+s.vendored_frameworks  = 'MARSDK_EPSDK/Classes/*.framework' 
 s.frameworks = "Security","SystemConfiguration"
 s.ios.library = "icucore","z","c++"  
 
