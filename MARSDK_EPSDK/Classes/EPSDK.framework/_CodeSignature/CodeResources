@@ -4,33 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/MARSDKCore.framework/Info.plist</key>
+		<key>.DS_Store</key>
 		<data>
-		/59pV/3+Et7WOzDOmBkuZOEyjgM=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/MARSDKCore</key>
-		<data>
-		q22kc5oXfiY369A8jI/bVoevtTw=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeDirectory</key>
-		<data>
-		kp8dMnycKueed3pXTZffOpon8pA=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeRequirements</key>
-		<data>
-		DxKgDgyTlJOkALNWz3ICLBxf0Jg=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		1U65shEHMO0vD8SjrE7Ta6rcGb0=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeResources</key>
-		<data>
-		B/Gvqg1jjZg7sDUoOIGIEtd9YIo=
-		</data>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeSignature</key>
-		<data>
-		s40ezf7qU95kKWLv6tr0sBaPv1A=
+		my6Nb7kdg4Vv11IAdKsD/3/XHcU=
 		</data>
 		<key>Headers/EPGameExtraData.h</key>
 		<data>
@@ -50,11 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Bfgdpay0j/7gPAYPQeqlLh9XIzA=
-		</data>
-		<key>LICENSE</key>
-		<data>
-		d4vR4nBIZkfY0zadwAT2RvYHJIE=
+		9FR8+4Tpv8eiOyjdjEYyCLZEQKk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -100,90 +72,9 @@
 		<data>
 		5OK615zycP6SpxQfvzANbf7b/7k=
 		</data>
-		<key>README.md</key>
-		<data>
-		jnuAWiw8oADIa2kt1v6Byt2yWE8=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/MARSDKCore.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			/59pV/3+Et7WOzDOmBkuZOEyjgM=
-			</data>
-			<key>hash2</key>
-			<data>
-			bO8xefmlOl4g8X4GDNx7o6jFC3Eote5A1cu3FMOikiU=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/MARSDKCore</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q22kc5oXfiY369A8jI/bVoevtTw=
-			</data>
-			<key>hash2</key>
-			<data>
-			1/SgfSNLW838mk7dglpN5X/6IXsIOImQUvtLLSCpNP8=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kp8dMnycKueed3pXTZffOpon8pA=
-			</data>
-			<key>hash2</key>
-			<data>
-			LEycFsq6sBBWMe08W0iCKnMBRGf0WBS1BcC/p4f4gW8=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DxKgDgyTlJOkALNWz3ICLBxf0Jg=
-			</data>
-			<key>hash2</key>
-			<data>
-			t8byuL+WdRiaiL3SW1e2r5VZVrAobAwDOgAtwz/PmfU=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1U65shEHMO0vD8SjrE7Ta6rcGb0=
-			</data>
-			<key>hash2</key>
-			<data>
-			Z90ZOxwIejku8c/47OqQuFOH7gNxwHoROz8iFFF3cH4=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			B/Gvqg1jjZg7sDUoOIGIEtd9YIo=
-			</data>
-			<key>hash2</key>
-			<data>
-			DR6+wK/+nF3voAG9rdpHzX5Ypsdmo3HIfxkz2JKAnuI=
-			</data>
-		</dict>
-		<key>Frameworks/MARSDKCore.framework/_CodeSignature/CodeSignature</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			s40ezf7qU95kKWLv6tr0sBaPv1A=
-			</data>
-			<key>hash2</key>
-			<data>
-			nWERxvL/IdZnUGbb02Nczfh81cbroD9wQryWiDVxHU0=
-			</data>
-		</dict>
 		<key>Headers/EPGameExtraData.h</key>
 		<dict>
 			<key>hash</key>
@@ -226,17 +117,6 @@
 			<key>hash2</key>
 			<data>
 			Ca5n9BGDnOttviUlTGHx7eBPltX2EqrsSDesZ+BsP28=
-			</data>
-		</dict>
-		<key>LICENSE</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			d4vR4nBIZkfY0zadwAT2RvYHJIE=
-			</data>
-			<key>hash2</key>
-			<data>
-			ixQlravJx533CrER2wU9tfg5neujEsqiFzfTJ1YFNPk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -358,17 +238,6 @@
 			<key>hash2</key>
 			<data>
 			RElnwCFL5t66tBAOVlvTX4lLJZgCFPYqWmPWKuzt+Iw=
-			</data>
-		</dict>
-		<key>README.md</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jnuAWiw8oADIa2kt1v6Byt2yWE8=
-			</data>
-			<key>hash2</key>
-			<data>
-			Oao13QJSR45kqoxLyCVe7tl4OdDngWJA2KTwi6K9SUA=
 			</data>
 		</dict>
 	</dict>
