@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		my6Nb7kdg4Vv11IAdKsD/3/XHcU=
-		</data>
 		<key>Headers/EPGameExtraData.h</key>
 		<data>
 		LUOJQ/T6BgPxEOHaAf2J1GjSgHs=
@@ -26,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9FR8+4Tpv8eiOyjdjEYyCLZEQKk=
+		nAkaqrlqoSpQbUODj4dNPwTrx+w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
