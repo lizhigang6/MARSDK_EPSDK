@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>EPSDKResources.bundle/dark.png</key>
+		<data>
+		Va/blq66wbQo5yxNTcNfN53eBkM=
+		</data>
 		<key>EPSDKResources.bundle/ep_applepay.png</key>
 		<data>
 		fWZghtgwycReDz0R+7LKAAyzFA0=
@@ -15,10 +19,6 @@
 		<key>EPSDKResources.bundle/ep_chongzhi.png</key>
 		<data>
 		yVE+Hg/1fF2nto0YHk6O88rK9mo=
-		</data>
-		<key>EPSDKResources.bundle/ep_floating.png</key>
-		<data>
-		CatkdMzrcKPZ7si9t5FQqnnvgww=
 		</data>
 		<key>EPSDKResources.bundle/ep_gift.png</key>
 		<data>
@@ -64,13 +64,33 @@
 		<data>
 		+c+A4J6pnGTxzS3EYbpIiiXiirk=
 		</data>
+		<key>EPSDKResources.bundle/floating.png</key>
+		<data>
+		r1nw88buel2MQ5ieMMmNzRNjIkY=
+		</data>
+		<key>EPSDKResources.bundle/grass_green.png</key>
+		<data>
+		n/OZzrpyjObSy+MaJ2HMkVygTxY=
+		</data>
+		<key>EPSDKResources.bundle/icon_agree.png</key>
+		<data>
+		jZ3xFoSAwfTxvbuhVx0C3thNFo8=
+		</data>
 		<key>EPSDKResources.bundle/icon_agree_no.png</key>
 		<data>
-		5/o6rd+MKbfwjMQUbffeZGMMJh4=
+		Yeld95Cd3iI3qXNjl6xwXEcV/cA=
 		</data>
 		<key>EPSDKResources.bundle/icon_apple.png</key>
 		<data>
 		QXvQmDYA9cZDdllfmIyIrso8Ay8=
+		</data>
+		<key>EPSDKResources.bundle/icon_head_ agreement.png</key>
+		<data>
+		ZV6AEHCRGGpmCGJ2efJW3jd2opI=
+		</data>
+		<key>EPSDKResources.bundle/icon_head_ privacy.png</key>
+		<data>
+		GP7V8XIccpOycfhRcmL6Ys2V5As=
 		</data>
 		<key>EPSDKResources.bundle/icon_head_customer.png</key>
 		<data>
@@ -88,6 +108,14 @@
 		<data>
 		6x07tdj2PHMNYuxWvHzliycis8o=
 		</data>
+		<key>EPSDKResources.bundle/lake_blue.png</key>
+		<data>
+		KPfzodDO66874cwd/IYuVuEMUcc=
+		</data>
+		<key>EPSDKResources.bundle/light_green.png</key>
+		<data>
+		nt7saijJ2Dv4UCmNseJZjDNs5AQ=
+		</data>
 		<key>EPSDKResources.bundle/login_account.png</key>
 		<data>
 		atAseZ/JqQfe1zfoY/CqPszIKvc=
@@ -95,6 +123,18 @@
 		<key>EPSDKResources.bundle/login_taptap.png</key>
 		<data>
 		JUgEviroc4YFmlEMO+oWuiEhBG0=
+		</data>
+		<key>EPSDKResources.bundle/orangge.png</key>
+		<data>
+		AUgYerjZn6xu0MAZ40bRkO+Xq4A=
+		</data>
+		<key>EPSDKResources.bundle/purple.png</key>
+		<data>
+		0EDzINOkWsERoi45x3bDJbXi7KE=
+		</data>
+		<key>EPSDKResources.bundle/red.png</key>
+		<data>
+		Rd/2MtuywSjTEMhHQ4IvLQWuOi0=
 		</data>
 		<key>EPSDKResources.bundle/urn_realname_identify.png</key>
 		<data>
@@ -140,6 +180,10 @@
 		<data>
 		q4N7OAdngvEPVEdnlGNYO9Tz2+k=
 		</data>
+		<key>EPSDKResources.bundle/yellow.png</key>
+		<data>
+		d9ry54P5v5YADGSMlI8CLPR2b+c=
+		</data>
 		<key>Headers/EPGameExtraData.h</key>
 		<data>
 		LUOJQ/T6BgPxEOHaAf2J1GjSgHs=
@@ -158,7 +202,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+OEZ0EztxqXINDtS7bX6WLIM4Is=
+		6f9zzBl9oVAK8vNH6QqJHVoEwu0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -207,6 +251,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>EPSDKResources.bundle/dark.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Va/blq66wbQo5yxNTcNfN53eBkM=
+			</data>
+			<key>hash2</key>
+			<data>
+			ibfpPkwy2KSs8saVqzVspng9IOblEZX1g8WXsMAl/bI=
+			</data>
+		</dict>
 		<key>EPSDKResources.bundle/ep_applepay.png</key>
 		<dict>
 			<key>hash</key>
@@ -238,17 +293,6 @@
 			<key>hash2</key>
 			<data>
 			yaokzojgxoA4s/6CnGMwffU1+oRB3R61DvNdhRheyn0=
-			</data>
-		</dict>
-		<key>EPSDKResources.bundle/ep_floating.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			CatkdMzrcKPZ7si9t5FQqnnvgww=
-			</data>
-			<key>hash2</key>
-			<data>
-			p/VhMoSTNHtPRt793Ip3WiCNzyR2CVrgvosoxLwa5kQ=
 			</data>
 		</dict>
 		<key>EPSDKResources.bundle/ep_gift.png</key>
@@ -372,15 +416,48 @@
 			Svfjd9NfkuxY6yynIuzjOLINP6T4M1JnpFQM1ZRAu5g=
 			</data>
 		</dict>
+		<key>EPSDKResources.bundle/floating.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r1nw88buel2MQ5ieMMmNzRNjIkY=
+			</data>
+			<key>hash2</key>
+			<data>
+			P9s5Ty7Pbh5Gi0MmaR23rWQsLBM1LxZxVRZoORf7C6Y=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/grass_green.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n/OZzrpyjObSy+MaJ2HMkVygTxY=
+			</data>
+			<key>hash2</key>
+			<data>
+			p6aPcc/ic3GEvbbf9ndAeoILotv2ZjMDsE5uHCrwVQg=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/icon_agree.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jZ3xFoSAwfTxvbuhVx0C3thNFo8=
+			</data>
+			<key>hash2</key>
+			<data>
+			8Nyr/HBhqDHcZrerRloY2uwFm11+YP6TJ0qGX6cLc4c=
+			</data>
+		</dict>
 		<key>EPSDKResources.bundle/icon_agree_no.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5/o6rd+MKbfwjMQUbffeZGMMJh4=
+			Yeld95Cd3iI3qXNjl6xwXEcV/cA=
 			</data>
 			<key>hash2</key>
 			<data>
-			DNdgti5x22SsWcon+Ny6fDlSpI7reRleQIRHBq/4M0g=
+			aRwiieOaUD+qf0jY1/smUlDWQwiR7oRffoC/FpCaOMI=
 			</data>
 		</dict>
 		<key>EPSDKResources.bundle/icon_apple.png</key>
@@ -392,6 +469,28 @@
 			<key>hash2</key>
 			<data>
 			b92ErynMj6lxmlNt29XNz3SxQkpw4qydCKQ4gJvso9Y=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/icon_head_ agreement.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZV6AEHCRGGpmCGJ2efJW3jd2opI=
+			</data>
+			<key>hash2</key>
+			<data>
+			7uxouhbALOC/mMzPgwn9Xim8QZlYywbMdz82c6yUypc=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/icon_head_ privacy.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GP7V8XIccpOycfhRcmL6Ys2V5As=
+			</data>
+			<key>hash2</key>
+			<data>
+			Bh8MCdyF1Rq9O9etzF6Yd11n8weZGeNNjyUDvIEQt6s=
 			</data>
 		</dict>
 		<key>EPSDKResources.bundle/icon_head_customer.png</key>
@@ -438,6 +537,28 @@
 			I8wVKhPIATwcukNVKsqEVZBbMMDUuIRtY7kIsX7/9MQ=
 			</data>
 		</dict>
+		<key>EPSDKResources.bundle/lake_blue.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KPfzodDO66874cwd/IYuVuEMUcc=
+			</data>
+			<key>hash2</key>
+			<data>
+			xeBKbf23pysq1x4K3oJnO09l0I60YqWMoGAFAllesXs=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/light_green.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nt7saijJ2Dv4UCmNseJZjDNs5AQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			2j2syGJ7K7pxdA6FbuaUjzzGd6oRoNl/J5PCLC0Rl0A=
+			</data>
+		</dict>
 		<key>EPSDKResources.bundle/login_account.png</key>
 		<dict>
 			<key>hash</key>
@@ -458,6 +579,39 @@
 			<key>hash2</key>
 			<data>
 			5QSBBDyN4foGGtxl0gcuQv5L+cXTS2FrM1X9KkZNgSA=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/orangge.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AUgYerjZn6xu0MAZ40bRkO+Xq4A=
+			</data>
+			<key>hash2</key>
+			<data>
+			0pIXzSv3M63CrEKiFZYTxO2EW5DC8d5p75diRUn6Px8=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/purple.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0EDzINOkWsERoi45x3bDJbXi7KE=
+			</data>
+			<key>hash2</key>
+			<data>
+			5vLVpn6cvS6bdcrEAzpb70LQGyqedCBcMsBqUL1hGeQ=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/red.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rd/2MtuywSjTEMhHQ4IvLQWuOi0=
+			</data>
+			<key>hash2</key>
+			<data>
+			FHsndiGLETmwSoqef6mNl9vzN0FWOPhQ2eCSEjV67go=
 			</data>
 		</dict>
 		<key>EPSDKResources.bundle/urn_realname_identify.png</key>
@@ -579,6 +733,17 @@
 			<key>hash2</key>
 			<data>
 			lHjV+zc/rpYx8NoF6RRLN52+Ep4phlfyQouIhfnTG6Q=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/yellow.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			d9ry54P5v5YADGSMlI8CLPR2b+c=
+			</data>
+			<key>hash2</key>
+			<data>
+			MBPkPKupBF/yuIYEcn4UiSBOMab7vPqnHu/sILY57Y4=
 			</data>
 		</dict>
 		<key>Headers/EPGameExtraData.h</key>
