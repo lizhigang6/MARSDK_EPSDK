@@ -202,51 +202,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0xbbDi0/xw5n0kGkEen1ZrOmFG8=
+		a5376fb6XCq6oVgNmJwTBPLEBXw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		ywqZtKv/RpJ5R2Q96MRReDVq9+c=
-		</data>
-		<key>OXSaiSDK.bundle/OXCancel@3x.png</key>
-		<data>
-		JxYyI07Xz46Qu4swdSFLS0gaT6E=
-		</data>
-		<key>OXSaiSDK.bundle/OXCheckButton@3x.png</key>
-		<data>
-		3/vuR7WFXeriA7oSckMZeojt0ig=
-		</data>
-		<key>OXSaiSDK.bundle/OXHeightButton@3x.png</key>
-		<data>
-		3/vuR7WFXeriA7oSckMZeojt0ig=
-		</data>
-		<key>OXSaiSDK.bundle/OXLogo@3x.png</key>
-		<data>
-		kgt5OZ5KZ/vJcNXmbgtZVK76UJ4=
-		</data>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/objects-11.0+.nib</key>
-		<data>
-		9VFcgRhMvOvUMRWj+2pAXojxv8k=
-		</data>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/objects-13.0+.nib</key>
-		<data>
-		hLpAzD8/KPjj/8AFZqv5uEE4XIE=
-		</data>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/runtime.nib</key>
-		<data>
-		AfH+w2O333p6FmV05UFv6s0Cl50=
-		</data>
-		<key>OXSaiSDK.bundle/OXSelected@3x.png</key>
-		<data>
-		Osiib1egwZjaTca8U2tZ5cM59wY=
-		</data>
-		<key>OXSaiSDK.bundle/OXUnCheckButton@3x.png</key>
-		<data>
-		TslhRBTifoy8OKjb9+y9t4v8GFQ=
-		</data>
-		<key>OXSaiSDK.bundle/OXUnSelect@3x.png</key>
-		<data>
-		5OK615zycP6SpxQfvzANbf7b/7k=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -799,116 +759,6 @@
 			<key>hash2</key>
 			<data>
 			ENtLyLFK9/lIO99XvgPNTYs0ahhdYE0L9hz5gWw/p2s=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXCancel@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JxYyI07Xz46Qu4swdSFLS0gaT6E=
-			</data>
-			<key>hash2</key>
-			<data>
-			8QKgNClFR8DJV22Bvl73ncL0ZSHc6rPK+URsjv80DDE=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXCheckButton@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3/vuR7WFXeriA7oSckMZeojt0ig=
-			</data>
-			<key>hash2</key>
-			<data>
-			XkPt02hUpgf82Ro79YzmtJVccHkMhPFFUMOmYbOdZIU=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXHeightButton@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3/vuR7WFXeriA7oSckMZeojt0ig=
-			</data>
-			<key>hash2</key>
-			<data>
-			XkPt02hUpgf82Ro79YzmtJVccHkMhPFFUMOmYbOdZIU=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXLogo@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kgt5OZ5KZ/vJcNXmbgtZVK76UJ4=
-			</data>
-			<key>hash2</key>
-			<data>
-			3PpsCCnlILzyV7j6ML3m7T4eV2x9FrHoMAnuxNUEd3Q=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/objects-11.0+.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9VFcgRhMvOvUMRWj+2pAXojxv8k=
-			</data>
-			<key>hash2</key>
-			<data>
-			NoMLY+eBahFi4A8+tmBQe6J0Xf0S4eWZcTUBQj2oCDI=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hLpAzD8/KPjj/8AFZqv5uEE4XIE=
-			</data>
-			<key>hash2</key>
-			<data>
-			NSZ2ajlcZO7dPmHXSnGX2RnmOouD8IBRJ6FOLQREt7A=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXOneKeyLogin.nib/runtime.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AfH+w2O333p6FmV05UFv6s0Cl50=
-			</data>
-			<key>hash2</key>
-			<data>
-			NYNa636VXaYOo6wiM78uDpkGcIihBEtH921uMOhILGU=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXSelected@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Osiib1egwZjaTca8U2tZ5cM59wY=
-			</data>
-			<key>hash2</key>
-			<data>
-			mqmty0VQVvr8V/Pn2ZH6po0np0p1nue01QzM3KYRj+Q=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXUnCheckButton@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TslhRBTifoy8OKjb9+y9t4v8GFQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			wOfzipCN4pcBLkx27WqEnvpdegqU0BbbTW5ryEVAYhM=
-			</data>
-		</dict>
-		<key>OXSaiSDK.bundle/OXUnSelect@3x.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5OK615zycP6SpxQfvzANbf7b/7k=
-			</data>
-			<key>hash2</key>
-			<data>
-			RElnwCFL5t66tBAOVlvTX4lLJZgCFPYqWmPWKuzt+Iw=
 			</data>
 		</dict>
 	</dict>
