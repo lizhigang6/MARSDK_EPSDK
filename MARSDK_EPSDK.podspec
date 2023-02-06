@@ -19,7 +19,7 @@ s.resource_bundles = {
 s.vendored_libraries =  'MARSDK_EPSDK/SDK/libMARSDK_EPSDK.a'
 s.vendored_frameworks  = 'MARSDK_EPSDK/Classes/*.framework' 
 s.frameworks = "Security","SystemConfiguration","AVFoundation","MobileCoreServices","CoreGraphics","CoreTelephony","CoreFoundation","CFNetwork","CoreLocation"
-s.ios.library = "icucore","z","c++","libicucore","libsqlite3","libresolv","libc++.1"
+s.ios.library = "icucore","z","c++","icucore","sqlite3","resolv","c++.1"
 
 s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 end
