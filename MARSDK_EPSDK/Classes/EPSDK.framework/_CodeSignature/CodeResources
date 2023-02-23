@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		uKrMQIUND1dHUBiZFfOKO/a//Gw=
-		</data>
 		<key>EPSDKResources.bundle/dark.png</key>
 		<data>
 		Va/blq66wbQo5yxNTcNfN53eBkM=
@@ -206,7 +202,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MQCcIkFe9IkWP0/f9AagBkrUlyU=
+		eShjnMp2fGUrq70fgT7iPItGelc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
