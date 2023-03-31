@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char EPSDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <EPSDK/PublicHeader.h>
 #import <EPSDK/EPPlatform.h>
 #import <EPSDK/EPPayData.h>
+#import <EPSDK/EP_AppStorePay.h>
 
 
 
