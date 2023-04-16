@@ -198,7 +198,7 @@
 		</data>
 		<key>Headers/EPSDK.h</key>
 		<data>
-		k2JDn/mYv7PYL1jyZIxYUqpd60s=
+		VNRQ+2rVCkcCS8FK8yy4AZPuvVA=
 		</data>
 		<key>Headers/EP_AppStorePay.h</key>
 		<data>
@@ -206,11 +206,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lUx2kMDLG1P/HZOnQRJeEg8PmD0=
+		0OYH8Bk9ujxzNEtk97gv/gZEEmQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		ywqZtKv/RpJ5R2Q96MRReDVq9+c=
+		</data>
+		<key>libMasonry.a</key>
+		<data>
+		fYNmy3r4k2cB7U2h1QebVdtkMBw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -747,11 +751,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k2JDn/mYv7PYL1jyZIxYUqpd60s=
+			VNRQ+2rVCkcCS8FK8yy4AZPuvVA=
 			</data>
 			<key>hash2</key>
 			<data>
-			txDtozUHWdxmmezhVsK9oYSB/MsNhwgO/W8ji/TjiOk=
+			KxB66yqpKVSlc0NxluHDQUpuUbeO9KpJn0p3iaodwsM=
 			</data>
 		</dict>
 		<key>Headers/EP_AppStorePay.h</key>
@@ -774,6 +778,17 @@
 			<key>hash2</key>
 			<data>
 			ENtLyLFK9/lIO99XvgPNTYs0ahhdYE0L9hz5gWw/p2s=
+			</data>
+		</dict>
+		<key>libMasonry.a</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fYNmy3r4k2cB7U2h1QebVdtkMBw=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzUfu9nUeQGw1yCUEcQTY/rGNdXA06ZDkeyGUeGyW4E=
 			</data>
 		</dict>
 	</dict>
