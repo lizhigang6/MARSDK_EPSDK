@@ -212,10 +212,6 @@
 		<data>
 		ywqZtKv/RpJ5R2Q96MRReDVq9+c=
 		</data>
-		<key>libMasonry.a</key>
-		<data>
-		fYNmy3r4k2cB7U2h1QebVdtkMBw=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -778,17 +774,6 @@
 			<key>hash2</key>
 			<data>
 			ENtLyLFK9/lIO99XvgPNTYs0ahhdYE0L9hz5gWw/p2s=
-			</data>
-		</dict>
-		<key>libMasonry.a</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fYNmy3r4k2cB7U2h1QebVdtkMBw=
-			</data>
-			<key>hash2</key>
-			<data>
-			JzUfu9nUeQGw1yCUEcQTY/rGNdXA06ZDkeyGUeGyW4E=
 			</data>
 		</dict>
 	</dict>
