@@ -8,6 +8,10 @@
 #import "EPPayData.h"
 #import <Foundation/Foundation.h>
 #import "EPGameExtraData.h"
+
+//#define [EPPlatform sharedInstance] [EPPlatform sharedInstance]
+
+
 //ESDK相关回调接口， 游戏层在初始化的时候， 传入该delegate
 @protocol EPPlatformDelegate<NSObject>
 
@@ -56,6 +60,8 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
 - (void)applicationWillResignActive:(UIApplication *)application;
+
+-(void)epsdklog:(NSString *)message;
 
 @end
 
