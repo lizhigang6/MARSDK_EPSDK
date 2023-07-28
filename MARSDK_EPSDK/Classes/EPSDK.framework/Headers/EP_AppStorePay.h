@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^purchasedNonConsumableBlock)(NSArray *purchasedNonConsumableArray);
 
-@interface EP_AppStorePay : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver>
+@interface EP_AppStorePay : NSObject <SKRequestDelegate,SKProductsRequestDelegate, SKPaymentTransactionObserver>
 @property (nonatomic,strong) purchasedNonConsumableBlock  purchasedNonConsumableArray;
 
 +(EP_AppStorePay*) sharedInstance;
