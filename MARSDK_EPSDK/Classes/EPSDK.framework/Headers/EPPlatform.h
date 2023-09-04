@@ -61,7 +61,6 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 
 - (void)applicationWillResignActive:(UIApplication *)application;
 
--(void)epsdklog:(NSString *)message;
 
 @end
 

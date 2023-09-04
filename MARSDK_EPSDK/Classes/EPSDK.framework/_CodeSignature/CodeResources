@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		eUaXnajDAsO/wE80h/90oXp6BIc=
+		</data>
 		<key>EPSDKResources.bundle/dark.png</key>
 		<data>
 		Va/blq66wbQo5yxNTcNfN53eBkM=
@@ -194,7 +198,7 @@
 		</data>
 		<key>Headers/EPPlatform.h</key>
 		<data>
-		wlgX/D01902haRDckKMQaKy7hA4=
+		gUh1bN7l4m93HdP1RbTMYPUdfFI=
 		</data>
 		<key>Headers/EPSDK.h</key>
 		<data>
@@ -206,7 +210,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6Sd2AzPr3qxkRb8bo2q+xYt0biI=
+		tm0ONJJdOY2Jd3aBYswQZ+jbEUY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -736,11 +740,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wlgX/D01902haRDckKMQaKy7hA4=
+			gUh1bN7l4m93HdP1RbTMYPUdfFI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vkwi5pPC6iw3uCDBXoKoLk/TDz32cR1ezDS+QTM/Srw=
+			oO2qxs509BY5enGWYQQ20Y/snYIuogZr1Y8ChL+rvU4=
 			</data>
 		</dict>
 		<key>Headers/EPSDK.h</key>
