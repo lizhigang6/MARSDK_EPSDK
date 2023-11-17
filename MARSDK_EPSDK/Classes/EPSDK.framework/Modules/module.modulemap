@@ -1,6 +1,6 @@
 framework module EPSDK {
   umbrella header "EPSDK.h"
-
   export *
+
   module * { export * }
 }

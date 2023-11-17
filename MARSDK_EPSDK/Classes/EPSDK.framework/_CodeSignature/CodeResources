@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		eUaXnajDAsO/wE80h/90oXp6BIc=
-		</data>
 		<key>EPSDKResources.bundle/dark.png</key>
 		<data>
 		Va/blq66wbQo5yxNTcNfN53eBkM=
@@ -210,11 +206,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tm0ONJJdOY2Jd3aBYswQZ+jbEUY=
+		QvqKmuZjqFIX+p+pC+ICnz1A+Po=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		ywqZtKv/RpJ5R2Q96MRReDVq9+c=
+		p2ZHVh7VlzZYBq+f3nk0nEyAYu0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -773,11 +769,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ywqZtKv/RpJ5R2Q96MRReDVq9+c=
+			p2ZHVh7VlzZYBq+f3nk0nEyAYu0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ENtLyLFK9/lIO99XvgPNTYs0ahhdYE0L9hz5gWw/p2s=
+			BHtqqwit9Fnv9bfChmKjsd3WQ63uNMQa+Nr7pWe+Lqo=
 			</data>
 		</dict>
 	</dict>
