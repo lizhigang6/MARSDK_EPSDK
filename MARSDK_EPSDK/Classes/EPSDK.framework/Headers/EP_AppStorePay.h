@@ -25,6 +25,7 @@ typedef void(^purchasedNonConsumableBlock)(NSArray *purchasedNonConsumableArray)
 
 -(void)pay:(EPPayData*)payData orderID:(NSString*)orderID viewController:(UIViewController*)viewController;
 
+- (void)resumptionPurchases:(NSString *)productID;
 @end
 
 NS_ASSUME_NONNULL_END

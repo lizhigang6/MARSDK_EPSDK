@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 
 +(EPPlatform*) sharedInstance;
 
-
+-(void)showHint:(NSString*)msg;
 -(void)initWithGameAppId:(NSString*)appId subMasterId:(NSString*)masterId delegate:(id<EPPlatformDelegate>)delegate;
 
 -(void)login:(UIViewController*)viewController;
@@ -61,6 +61,7 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 
 - (void)applicationWillResignActive:(UIApplication *)application;
 
+- (void)resumptionPurchases:(NSString *)productID;
 
 @end
 
