@@ -72,6 +72,10 @@
 		<data>
 		Vkf3BaHl9hOwvFCXGGNdob89Vuc=
 		</data>
+		<key>EPSDKResources.bundle/ep_weixin.png</key>
+		<data>
+		mJwfDbiqZPm5QRu0QlshYLiKC4Q=
+		</data>
 		<key>EPSDKResources.bundle/ep_weixinpay.png</key>
 		<data>
 		+c+A4J6pnGTxzS3EYbpIiiXiirk=
@@ -131,6 +135,10 @@
 		<key>EPSDKResources.bundle/icon_sms.png</key>
 		<data>
 		PVGe2SJDFM42g+qISIVYxNO2+3A=
+		</data>
+		<key>EPSDKResources.bundle/icon_weixin.png</key>
+		<data>
+		E7kuT6551QBxJzWLmt/ilLzY+jE=
 		</data>
 		<key>EPSDKResources.bundle/lake_blue.png</key>
 		<data>
@@ -434,6 +442,17 @@
 			C42TIEiVJxz5AJF7IDwAkQEH1hYZmmUFpQPTPCkCQMg=
 			</data>
 		</dict>
+		<key>EPSDKResources.bundle/ep_weixin.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mJwfDbiqZPm5QRu0QlshYLiKC4Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			DM2rmxJXzHEqU1OKQZBjSoGbbjs4AZpsaosv+lbU7x0=
+			</data>
+		</dict>
 		<key>EPSDKResources.bundle/ep_weixinpay.png</key>
 		<dict>
 			<key>hash</key>
@@ -597,6 +616,17 @@
 			<key>hash2</key>
 			<data>
 			HqC+f7SENtbKNGr9MZw66Abs18XWWvUk8efeqCicu2c=
+			</data>
+		</dict>
+		<key>EPSDKResources.bundle/icon_weixin.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			E7kuT6551QBxJzWLmt/ilLzY+jE=
+			</data>
+			<key>hash2</key>
+			<data>
+			MCts3CWWdoGqpNA1J8OyZxf5t7x/qsDN24S87VGHiZ0=
 			</data>
 		</dict>
 		<key>EPSDKResources.bundle/lake_blue.png</key>
