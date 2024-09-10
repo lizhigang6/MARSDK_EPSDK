@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
-#import "EPPayData.h"
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
