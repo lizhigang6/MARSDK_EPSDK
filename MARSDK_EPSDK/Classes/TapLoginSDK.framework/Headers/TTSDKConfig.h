@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define TapLoginSDKErrorDomain @"TapLoginSDKErrorDomain"
+
 typedef NS_ENUM (NSInteger, RegionType) {
     RegionTypeCN,
     RegionTypeIO
@@ -21,6 +23,8 @@ typedef NS_ENUM (NSInteger, RegionType) {
 @property (nonatomic, assign) BOOL roundCorner;
 /// 限定登录客户端
 @property (nonatomic, assign) RegionType regionType;
+/// Server URL
+@property (nonatomic, copy) NSString *serverURL;
 
 @end
 

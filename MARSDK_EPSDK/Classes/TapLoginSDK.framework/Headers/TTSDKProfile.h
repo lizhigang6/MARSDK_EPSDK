@@ -16,16 +16,20 @@
 @interface TTSDKProfile : NSObject
 
 /// 用户名
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly, strong) NSString *name;
 
 /// 用户头像
-@property (nonatomic, readonly) NSString *avatar;
+@property (nonatomic, readonly, strong) NSString *avatar;
 
 /// open id
-@property (nonatomic, readonly) NSString *openid;
+@property (nonatomic, readonly, strong) NSString *openid;
 
 /// union id
-@property (nonatomic, readonly) NSString *unionid;
+@property (nonatomic, readonly, strong) NSString *unionid;
+
+@property (nonatomic, readonly, strong) NSString *email;
+
+@property (nonatomic, readonly, assign, getter = isEmailVerified) BOOL emailVerified;
 
 - (instancetype)initWithJSON:(NSDictionary *)json;
 
@@ -39,4 +43,6 @@
 + (void)fetchProfileForCurrentAccessToken:(void (^)(TTSDKProfile *profile, NSError *error))handler;
 
 - (NSString *)toJsonString;
+
+- (NSDictionary *)toDictionary;
 @end

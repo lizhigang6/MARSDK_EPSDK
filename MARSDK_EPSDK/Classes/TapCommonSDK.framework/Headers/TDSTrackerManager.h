@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)registerTracker:(TDSTrackerConfig *)trackerConfig;
 
-- (void)trackWithEvent:(TDSTrackerEvent *)event;
+- (void)trackWithEvent:(id<TDSTrackerEventProtocol>)event;
 
 @end
 

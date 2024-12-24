@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)startSDKLogin:(NSString *)sdkName permission:(NSArray *)permissions;
 
 + (void)handleLoginError:(NSDictionary *)params;
+
++ (void)changeConfigWithClientId:(NSString *)clientId
+                      regionType:(RegionType)region
+                           token:(TTSDKAccessToken *)token;
 @end
 
 NS_ASSUME_NONNULL_END

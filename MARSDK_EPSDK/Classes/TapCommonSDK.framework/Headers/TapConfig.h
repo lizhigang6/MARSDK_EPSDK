@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <TapCommonSDK/TapDBConfig.h>
+#import <TapCommonSDK/TapBillboardConfig.h>
+#import <TapCommonSDK/TapAntiAddictionConfig.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,9 +19,13 @@ typedef NS_ENUM (NSInteger, TapSDKRegionType) {
 
 @interface TapConfig : NSObject
 @property (nonatomic, copy) NSString *clientId;
-@property (nonatomic, copy) NSString *clientSecret;
+@property (nonatomic, copy) NSString *clientToken;
+@property (nonatomic, copy) NSString *serverURL;
 @property (nonatomic, assign) TapSDKRegionType region;
 @property (nonatomic, strong) TapDBConfig * dbConfig;
+@property (nonatomic, strong) TapBillboardConfig *tapBillboardConfig;
+@property (nonatomic, strong) TapAntiAddictionConfig *tapAntiAddictionConfig;
+
 @end
 
 NS_ASSUME_NONNULL_END

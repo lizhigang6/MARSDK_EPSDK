@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)downloadImage:(NSString *)url callback:(downloadCallback)callback;
 
++ (void)downloadImage:(NSString *)url timeout:(int) timeout callback:(downloadCallback)callback;
+
+
++ (void)preDownloadImage:(NSString *)url callback:(downloadCallback)callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

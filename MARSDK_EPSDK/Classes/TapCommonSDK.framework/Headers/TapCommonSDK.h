@@ -15,12 +15,15 @@ FOUNDATION_EXPORT const unsigned char TapCommonSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TapCommonSDK/PublicHeader.h>
 
+#import <TapCommonSDK/UIColor+TDS.h>
 #import <TapCommonSDK/TapConfig.h>
 #import <TapCommonSDK/TapDBConfig.h>
+#import <TapCommonSDK/TapBillboardConfig.h>
 
 #import <TapCommonSDK/TDSAccount.h>
 #import <TapCommonSDK/TDSAccountProvider.h>
 #import <TapCommonSDK/TDSAccountNotification.h>
+#import <TapCommonSDK/TDSAccountManager.h>
 
 #import <TapCommonSDK/ComponentMessageDelegate.h>
 
@@ -30,8 +33,6 @@ FOUNDATION_EXPORT const unsigned char TapCommonSDKVersionString[];
 
 #import <TapCommonSDK/TDSAutoLayout.h>
 #import <TapCommonSDK/TDSButton.h>
-#import <TapCommonSDK/TDSCommonDialogView.h>
-#import <TapCommonSDK/TDSCommonEnvironment.h>
 
 #import <TapCommonSDK/EngineBridgeError.h>
 #import <TapCommonSDK/TDSBridge.h>
@@ -76,10 +77,12 @@ FOUNDATION_EXPORT const unsigned char TapCommonSDKVersionString[];
 #import <TapCommonSDK/TDSModelHelper.h>
 #import <TapCommonSDK/TDSReachability.h>
 #import <TapCommonSDK/TDSProgressHUD.h>
+#import <TapCommonSDK/TDSHUD.h>
 #import <TapCommonSDK/TDSLabel.h>
 #import <TapCommonSDK/TDSMemoryCache.h>
 #import <TapCommonSDK/TDSHttpDownloadBase.h>
 #import <TapCommonSDK/TDSHttpDownloadImage.h>
+#import <TapCommonSDK/TDSHttpDownloadFile.h>
 #import <TapCommonSDK/TDSFilePath.h>
 #import <TapCommonSDK/TDSImageManager.h>
 #import <TapCommonSDK/TDSLightWebImageView.h>
@@ -90,12 +93,15 @@ FOUNDATION_EXPORT const unsigned char TapCommonSDKVersionString[];
 #import <TapCommonSDK/WKCookieWebview+CookiesHandle.h>
 #import <TapCommonSDK/TDSCommonService.h>
 #import <TapCommonSDK/TDSNetInterceptor.h>
-#import <TapCommonSDK/TDSCommonConfirmDialog.h>
 #import <TapCommonSDK/TDSCommonUIHelper.h>
+#import <TapCommonSDK/TDSStandardUI.h>
 #import <TapCommonSDK/UIView+Toast.h>
 #import <TapCommonSDK/TDSThrottle.h>
 #import <TapCommonSDK/TDSDebounce.h>
+#import <TapCommonSDK/TDSCommonUtils.h>
+#import <TapCommonSDK/TDSNetworkTypeUtil.h>
 #import <TapCommonSDK/TDSLocalizeManager.h>
+#import <TapCommonSDK/TDSLocalizeUtil.h>
 
 #import <TapCommonSDK/TDSWSSecurity.h>
 #import <TapCommonSDK/TDSWSWebSocket.h>
@@ -103,9 +109,19 @@ FOUNDATION_EXPORT const unsigned char TapCommonSDKVersionString[];
 #import <TapCommonSDK/TDSTrackerManager.h>
 #import <TapCommonSDK/TDSTrackerConfig.h>
 #import <TapCommonSDK/TDSTrackerEvent.h>
+#import <TapCommonSDK/TDSTracker.h>
 #import <TapCommonSDK/UserModel.h>
 #import <TapCommonSDK/PageModel.h>
 #import <TapCommonSDK/ActionModel.h>
 #import <TapCommonSDK/NetworkStateModel.h>
 #import <TapCommonSDK/TDSTrackerEvent.h>
 #import <TapCommonSDK/TapLoginLogManager.h>
+
+#import <TapCommonSDK/TapPropertiesHolder.h>
+#import <TapCommonSDK/TDSHostReplaceUtil.h>
+
+#import <TapCommonSDK/TDSUrlSafe.h>
+#import <TapCommonSDK/TDSHandleUrl.h>
+#import <TapCommonSDK/TapBillboardConfig.h>
+#import <TapCommonSDK/TapTipHUD.h>
+

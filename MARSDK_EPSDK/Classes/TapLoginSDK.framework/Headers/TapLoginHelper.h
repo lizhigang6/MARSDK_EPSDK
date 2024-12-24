@@ -5,7 +5,7 @@
 //  Created by Bottle K on 2020/12/2.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <TapLoginSDK/TTSDKConfig.h>
 #import <TapLoginSDK/TTSDKAccessToken.h>
 #import <TapLoginSDK/TTSDKProfile.h>
@@ -14,8 +14,8 @@
 #import <TapLoginSDK/TapTapLoginResultDelegate.h>
 
 #define TapLoginSDK @"TapLogin"
-#define TapLoginSDK_VERSION_NUMBER @"20106001"
-#define TapLoginSDK_VERSION        @"2.1.6"
+#define TapLoginSDK_VERSION_NUMBER @"32905001"
+#define TapLoginSDK_VERSION        @"3.29.5"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -42,17 +42,22 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)unregisterLoginResultDelegate;
 
 /// 获取当前设置的登录回调
-+ (id <TapTapLoginResultDelegate>)getLoginResultDelegate;
++ (id <TapTapLoginResultDelegate> _Nullable)getLoginResultDelegate;
 
 /// 开始登录流程
 /// @param permissions 权限列表
 + (void)startTapLogin:(NSArray *)permissions;
 
+/// 开始登录流程
+/// @param targetViewController 需要展现的页面
+/// @param permissions 权限列表
++ (void)startTapLogin:(UIViewController *_Nullable)targetViewController permissions:(NSArray *)permissions;
+
 /// 获取当前 Token
-+ (TTSDKAccessToken *)currentAccessToken;
++ ( TTSDKAccessToken * _Nullable )currentAccessToken;
 
 /// 获取当前 Profile
-+ (TTSDKProfile *)currentProfile;
++ ( TTSDKProfile * _Nullable )currentProfile;
 
 /// 获取当前服务器上最新的 Profile
 /// @param callback 回调
@@ -60,10 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 登出
 + (void)logout;
-
-/// 获取当前用户是否有测试资格
-/// @param callback 回调
-+ (void)getTestQualification:(void (^)(BOOL isQualified, NSError *_Nullable error))callback;
 
 /// 当前是否有国内客户端支持
 + (BOOL)isTapTapClientSupport;
@@ -73,7 +74,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 监听 url 回调
 /// @param url url
-+ (BOOL)handleTapTapOpenURL:(NSURL *)url;
++ (BOOL)handleTapTapOpenURL:(NSURL *)url __attribute__((deprecated("Please use [TDSHandleUrl handleOpenURL:]")));
+
+/// 添加预设的登录请求权限
++ (void)appendPermission:(NSString *)permission;
+
 @end
 
 NS_ASSUME_NONNULL_END

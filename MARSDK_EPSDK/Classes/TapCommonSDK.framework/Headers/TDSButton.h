@@ -11,11 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TDSButton : UIButton
 
-@property (nonatomic, assign) NSInteger mode;
+/**
+扩展的点击区域，往外扩展是负数
+ */
+@property (nonatomic, assign) UIEdgeInsets extensionTouchInsets;
 
-- (void)confirmMode;
-
-- (void)cancelMode;
 @end
 
 NS_ASSUME_NONNULL_END

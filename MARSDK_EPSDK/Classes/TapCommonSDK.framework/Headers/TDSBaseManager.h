@@ -6,27 +6,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TapCommonSDK/TDSAccount.h>
+#import <TapCommonSDK/TapConfig.h>
 
 #define TapCommonSDK @"TapCommon"
-#define TapCommonSDK_VERSION_NUMBER @"20106001"
-#define TapCommonSDK_VERSION        @"2.1.6"
+#define TapCommonSDK_VERSION_NUMBER @"32905001"
+#define TapCommonSDK_VERSION        @"3.29.5"
 
 NS_ASSUME_NONNULL_BEGIN
-typedef NSString *TDSLanguage NS_STRING_ENUM;
-
-FOUNDATION_EXPORT TDSLanguage const TDSLanguageCN;
-FOUNDATION_EXPORT TDSLanguage const TDSLanguageEN;
 
 @interface TDSBaseManager : NSObject
 
-+ (instancetype)new NS_UNAVAILABLE;
++ (TDSBaseManager *)shareInstance;
++ (void)setDurationStatisticsEnabled:(BOOL)enable;
++ (void)setNativeCoreEnabled:(BOOL)enable;
++ (void)initWithSDKConfig:(TapConfig *)config;
++ (TapConfig *)getConfig;
++ (void)setDurationExtraParams:(NSDictionary<NSString *, NSObject *> *) params;
 
-+ (instancetype)shareInstance;
-
-- (void)setLanguage:(NSString *)language;
-
-- (NSString *)getLanguage;
 @end
 
 NS_ASSUME_NONNULL_END

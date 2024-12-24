@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <TapCommonSDK/TDSNetSubscriber.h>
 
-typedef NS_ENUM(NSUInteger, TDSNetMethod) {
+typedef NS_ENUM (NSUInteger, TDSNetMethod) {
     TDSNetMethodGet = 1,
     TDSNetMethodPost
 };
@@ -29,18 +29,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) Class resCls;
 
-@end
+@property (nonatomic, copy, nullable) NSDictionary *header;
 
+//是否使用原始网络返回结果
+@property (nonatomic, assign) BOOL useOriginResponse;
+
+@end
 
 @interface TDSNetExecutor<__covariant T>: NSObject
 
-+ (TDSNetExecutor *)create:(void (NS_NOESCAPE^)(id<TDSNetSubscriber> subscriber))didSubscribe;
++ (TDSNetExecutor *)create:(void(NS_NOESCAPE ^)(id<TDSNetSubscriber> subscriber))didSubscribe;
 
-- (void)success:(void (NS_NOESCAPE ^)(id _Nonnull x))success;
+- (void)success:(void(NS_NOESCAPE ^)(id _Nonnull x))success;
 
-- (void)success:(void (NS_NOESCAPE ^)(id _Nonnull x))success failure:(void (^)(NSError *error))failure;
+- (void)success:(void(NS_NOESCAPE ^)(id _Nonnull x))success failure:(void (^)(NSError *error))failure;
 
-- (void)success:(void (NS_NOESCAPE ^)(id _Nonnull x))success failure:(void (^)(NSError *error))failure progress:(void (NS_NOESCAPE ^)(id progress))progress;
+- (void)success:(void(NS_NOESCAPE ^)(id _Nonnull x))success failure:(void (^)(NSError *error))failure progress:(void(NS_NOESCAPE ^)(id progress))progress;
 
 @end
 

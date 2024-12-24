@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, copy) NSString *channel;
 @property (nonatomic, copy) NSString *gameVersion;
+@property (nonatomic, copy) NSDictionary *deviceLoginProperties;
 @property (nonatomic, assign, getter=isAdvertiserIDCollectionEnabled) BOOL advertiserIDCollectionEnabled;
 
 @end
