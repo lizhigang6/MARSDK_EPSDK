@@ -22,7 +22,7 @@
 -(void) OnLogoutSuccess;
 -(void) OnLogoutFailed:(NSString*)msg;
 -(void) OnPaySuccess:(NSDictionary*)msg;
--(void) OnPayFailed:(NSString*)msg;
+-(void) OnPayFailed:(NSDictionary*)msg;
 @end
 
 typedef NS_ENUM(NSInteger, ESDKStateCode)
@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 
 @interface EPPlatform : NSObject
 
+
+
 @property id<EPPlatformDelegate> delegate;
 
 +(EPPlatform*) sharedInstance;
@@ -46,7 +48,8 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 -(void)login:(UIViewController*)viewController;
 
 -(void)logout;
-
+//是否登录
+-(BOOL)isLogin;
 -(void)submitGameData:(EPGameExtraData*)data;
 
 -(void)pay:(EPPayData*)data viewController:(UIViewController*)viewController;

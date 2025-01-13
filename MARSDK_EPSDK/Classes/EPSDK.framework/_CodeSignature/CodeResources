@@ -234,15 +234,11 @@
 		</data>
 		<key>Headers/EPPlatform.h</key>
 		<data>
-		Zjg3nJPEc75lfB0z+iBNu8MBBhA=
+		NjaqdMWwhyaTdU/L5o1wN9TjNjE=
 		</data>
 		<key>Headers/EPSDK.h</key>
 		<data>
-		VNRQ+2rVCkcCS8FK8yy4AZPuvVA=
-		</data>
-		<key>Headers/EP_AppStorePay.h</key>
-		<data>
-		yNjM3wN5urOzEn1uiqancUQVUOE=
+		WD9H9eWrkl9EuNxvlqSJ3hachtY=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -886,33 +882,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Zjg3nJPEc75lfB0z+iBNu8MBBhA=
+			NjaqdMWwhyaTdU/L5o1wN9TjNjE=
 			</data>
 			<key>hash2</key>
 			<data>
-			hmdgGPfFakyy3xgAdDicpPJvyGxRqcEoEkXdOmjQG98=
+			rSZOlICLE2hHes8Cer0u26T6oIpBe+vMXtonSFSGIR0=
 			</data>
 		</dict>
 		<key>Headers/EPSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VNRQ+2rVCkcCS8FK8yy4AZPuvVA=
+			WD9H9eWrkl9EuNxvlqSJ3hachtY=
 			</data>
 			<key>hash2</key>
 			<data>
-			KxB66yqpKVSlc0NxluHDQUpuUbeO9KpJn0p3iaodwsM=
-			</data>
-		</dict>
-		<key>Headers/EP_AppStorePay.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yNjM3wN5urOzEn1uiqancUQVUOE=
-			</data>
-			<key>hash2</key>
-			<data>
-			caXaSSrkOQkev0KqjVi0Xq9IL2qqTCpFU7Cg1mifa5w=
+			Y3PCEmBHFPFxoRm7QoUVz1cbRm/f4+qzWtaSSl/tSkA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
