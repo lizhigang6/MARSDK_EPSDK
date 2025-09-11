@@ -10,6 +10,7 @@
 #import "EPGameExtraData.h"
 
 //#define [EPPlatform sharedInstance] [EPPlatform sharedInstance]
+typedef void (^SubscriptionResultHandler)(NSArray<NSString *> *products);
 
 
 //ESDK相关回调接口， 游戏层在初始化的时候， 传入该delegate
@@ -66,5 +67,21 @@ typedef NS_ENUM(NSInteger, ESDKStateCode)
 
 - (void)resumptionPurchases:(NSString *)productID;
 
+
+- (void)showHud;
+
+- (void)hideHud;
+//mar 登录成功检查是否有丢单
+-(void)checkUnFinishedOrders;
+
+//获取已经订阅
+- (void)fetchSubscriptionsWithCompletion:(SubscriptionResultHandler)completion;
+
+//-(void)Refundsub;
+//获取游戏类型
+-(int)getGameType;
+
+//获取服务器时间戳(百度时间，没有网络返回0， 有网返回毫秒级时间戳 )
+- (NSInteger )getInternetDate;
 @end
 

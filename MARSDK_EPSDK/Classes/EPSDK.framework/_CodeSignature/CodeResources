@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		dIkT9N/wAETtnwelGVGP0x60WW0=
+		</data>
 		<key>EPSDKResources.bundle/dark.png</key>
 		<data>
 		Va/blq66wbQo5yxNTcNfN53eBkM=
@@ -230,23 +234,47 @@
 		</data>
 		<key>Headers/EPPayData.h</key>
 		<data>
-		PM7q0+7rNoemvFACx1wz0apHfok=
+		RXI8BwQzKCXHftrdBuXHiiBLKKw=
 		</data>
 		<key>Headers/EPPlatform.h</key>
 		<data>
-		NjaqdMWwhyaTdU/L5o1wN9TjNjE=
+		Slisr0qsk2Bhe6pePGj5YU7VaWc=
+		</data>
+		<key>Headers/EPSDK-Swift.h</key>
+		<data>
+		wdDPb/G42teAPFu3Gukti2jSMzg=
 		</data>
 		<key>Headers/EPSDK.h</key>
 		<data>
-		WD9H9eWrkl9EuNxvlqSJ3hachtY=
+		IJgvHo9NdvzzTZvODnaX8k8yfy4=
+		</data>
+		<key>Headers/EP_NetWorking.h</key>
+		<data>
+		80PthLNh5lql160ElUeN6mlOwGk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vSqlzyyyhjFnrq1pwcVT/C8t0pQ=
+		M6GlgvCBpcVvetFhsfUCPFnK0P4=
+		</data>
+		<key>Modules/EPSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		XqXM3OJdvX/+Yt6rw127bkIcaTo=
+		</data>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		gcwBsH4BgyFY4sVtNt+/xOKS3vY=
+		</data>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<data>
+		r9sNxg9kSW0chs1sn9wwRcwDDik=
+		</data>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<data>
+		iLuOjiq8u7lIiS3dzfufwQPtGhg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		p2ZHVh7VlzZYBq+f3nk0nEyAYu0=
+		QHnoJ0UKAbxm/ooSXK8CGIlibgU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -871,44 +899,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PM7q0+7rNoemvFACx1wz0apHfok=
+			RXI8BwQzKCXHftrdBuXHiiBLKKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rw8GFmKRJ2+dNovBOLq4XHm6ZOniG2CL8GBAYA3R8VY=
+			NaNmgDafl++/sOb9drMb+fave6fmmfrN0mcwA6xasBA=
 			</data>
 		</dict>
 		<key>Headers/EPPlatform.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NjaqdMWwhyaTdU/L5o1wN9TjNjE=
+			Slisr0qsk2Bhe6pePGj5YU7VaWc=
 			</data>
 			<key>hash2</key>
 			<data>
-			rSZOlICLE2hHes8Cer0u26T6oIpBe+vMXtonSFSGIR0=
+			VbMgt0ewSQnq5mv+IChFR2V5L6NfQ2uwQ798PWWqQkQ=
+			</data>
+		</dict>
+		<key>Headers/EPSDK-Swift.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wdDPb/G42teAPFu3Gukti2jSMzg=
+			</data>
+			<key>hash2</key>
+			<data>
+			4R9YSXOwk9sHihnjy5LPH7aKkOgaowFcDpXHjByDmlw=
 			</data>
 		</dict>
 		<key>Headers/EPSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WD9H9eWrkl9EuNxvlqSJ3hachtY=
+			IJgvHo9NdvzzTZvODnaX8k8yfy4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y3PCEmBHFPFxoRm7QoUVz1cbRm/f4+qzWtaSSl/tSkA=
+			YkiFrkqcuKfAKnfZQkG5sDEGKfvseZ4U4KLomm3CF1I=
+			</data>
+		</dict>
+		<key>Headers/EP_NetWorking.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			80PthLNh5lql160ElUeN6mlOwGk=
+			</data>
+			<key>hash2</key>
+			<data>
+			uz3dcBKS5IErRctuVcl0OlDN0sONJH9tw/afWRkFZMQ=
+			</data>
+		</dict>
+		<key>Modules/EPSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XqXM3OJdvX/+Yt6rw127bkIcaTo=
+			</data>
+			<key>hash2</key>
+			<data>
+			aeKJkUx0rzxVLiTCpdECVDOQFj0vNsBaoScDzxEKvV8=
+			</data>
+		</dict>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gcwBsH4BgyFY4sVtNt+/xOKS3vY=
+			</data>
+			<key>hash2</key>
+			<data>
+			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
+			</data>
+		</dict>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r9sNxg9kSW0chs1sn9wwRcwDDik=
+			</data>
+			<key>hash2</key>
+			<data>
+			jAtsBhTbbqvc0rIdvnWZxLBrewWmiyV9ko4VEK7jeFU=
+			</data>
+		</dict>
+		<key>Modules/EPSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iLuOjiq8u7lIiS3dzfufwQPtGhg=
+			</data>
+			<key>hash2</key>
+			<data>
+			oQDgofRudcEKhAj5rfLudXb6RO1WeH/9pZpWb14xrFo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p2ZHVh7VlzZYBq+f3nk0nEyAYu0=
+			QHnoJ0UKAbxm/ooSXK8CGIlibgU=
 			</data>
 			<key>hash2</key>
 			<data>
-			BHtqqwit9Fnv9bfChmKjsd3WQ63uNMQa+Nr7pWe+Lqo=
+			Ws/3MFWDqdoEAmJjdI8dOViv7jvvbAWj3j/yPdgtcXQ=
 			</data>
 		</dict>
 	</dict>

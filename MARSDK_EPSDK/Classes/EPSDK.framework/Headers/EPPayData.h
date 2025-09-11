@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EPPayData : NSObject
 
-@property (nonatomic,assign) int payType; //支付方式 5:appstore；6:微信h5；7:支付宝h5
+@property (nonatomic,assign) int payType; //支付方式 1：支付宝；2：微信；4：X币；5：AppStore，6：微信H5，7:支付宝H5 8.AppStore订阅
 @property (nonatomic,assign) int price; //金额（单位：分）
 @property (nonatomic, strong) NSString* productID;   //商品ID
 @property (nonatomic, strong) NSString* productName;    //商品名称
@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* vip;            //vip等级
 @property (nonatomic, strong) NSString* extra;          //游戏扩展数据，支付通知回调的时候， 原样返回
 @property (nonatomic, strong) NSString* payNotifyUrl;   //支付回调地址
+@property (nonatomic, strong) NSString* introductoryPrice;   //订阅优惠价格
+
 
 @end
 

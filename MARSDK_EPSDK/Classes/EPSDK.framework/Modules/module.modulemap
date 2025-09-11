@@ -4,3 +4,8 @@ framework module EPSDK {
 
   module * { export * }
 }
+
+module EPSDK.Swift {
+  header "EPSDK-Swift.h"
+  requires objc
+}
