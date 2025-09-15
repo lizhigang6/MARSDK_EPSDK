@@ -1,6 +1,0 @@
-framework module THEMISLite {
-  umbrella header "THEMISLite.h"
-  export *
-
-  module * { export * }
-}

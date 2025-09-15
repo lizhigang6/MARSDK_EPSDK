@@ -1,6 +1,0 @@
-framework module TapTapNetworkSDK {
-  umbrella header "TapTapNetworkSDK.h"
-  export *
-
-  module * { export * }
-}

@@ -212,7 +212,11 @@ transactionIdentifier:(NSString *)transactionIdentifier
 + (void)getUserOrderList:(NSString *)gift
              FinishBlock:(void(^)(NSDictionary *returnDic, NSError *error))block;
 
-
+///获取用户订阅列表
+/// @param gift <#gift description#>
+/// @param block <#block description#>
++ (void)getUserSubsList:(NSString *)gift
+        FinishBlock:(void(^)(NSDictionary *returnDic, NSError *error))block;
 
 
 /// 常见问题
