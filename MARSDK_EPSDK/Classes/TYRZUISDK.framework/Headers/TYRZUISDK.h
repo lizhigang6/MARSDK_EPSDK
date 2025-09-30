@@ -3,7 +3,7 @@
 //  TYRZSDK
 //
 
-#import "UAFSDKLogin.h"
-#import "UAFSDKErrorCode.h"
-#import "UAFEnums.h"
 #import "UAFCustomModel.h"
+#import "UAFEnums.h"
+#import "UAFSDKErrorCode.h"
+#import "UAFSDKLogin.h"

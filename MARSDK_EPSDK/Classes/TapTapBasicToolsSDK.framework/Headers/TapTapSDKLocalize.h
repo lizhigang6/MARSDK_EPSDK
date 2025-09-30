@@ -9,22 +9,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM (NSInteger, TapLanguageType) {
-    TapLanguageType_Auto = 0,// 自动
-    TapLanguageType_zh_Hans,// 简体中文
-    TapLanguageType_en,// 英文
-    TapLanguageType_zh_Hant,// 繁体中文
-    TapLanguageType_ja,// 日文
-    TapLanguageType_ko,// 韩文
-    TapLanguageType_th,// 泰文
-    TapLanguageType_id,// 印度尼西亚语
-    TapLanguageType_de,// 德语
-    TapLanguageType_es,// 西班牙语
-    TapLanguageType_fr,// 法语
-    TapLanguageType_pt,// 葡萄牙语
-    TapLanguageType_ru,// 俄罗斯语
-    TapLanguageType_tr,// 土耳其语
-    TapLanguageType_vi,// 越南语
+typedef NS_ENUM(NSInteger, TapLanguageType) {
+    TapLanguageType_Auto = 0, // 自动
+    TapLanguageType_zh_Hans,  // 简体中文
+    TapLanguageType_en,       // 英文
+    TapLanguageType_zh_Hant,  // 繁体中文
+    TapLanguageType_ja,       // 日文
+    TapLanguageType_ko,       // 韩文
+    TapLanguageType_th,       // 泰文
+    TapLanguageType_id,       // 印度尼西亚语
+    TapLanguageType_de,       // 德语
+    TapLanguageType_es,       // 西班牙语
+    TapLanguageType_fr,       // 法语
+    TapLanguageType_pt,       // 葡萄牙语
+    TapLanguageType_ru,       // 俄罗斯语
+    TapLanguageType_tr,       // 土耳其语
+    TapLanguageType_vi,       // 越南语
 };
 
 @interface TapTapSDKLocalize : NSObject

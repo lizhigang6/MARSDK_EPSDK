@@ -10,15 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, TapTapSDKInitState){
+typedef NS_ENUM(NSInteger, TapTapSDKInitState) {
     INIT_STATE_SUCCESS = 0,
     INIT_STATE_EMPTY = -1,
     INIT_STATE_INVALID = -2
 };
 
 typedef NS_ENUM(NSInteger, TapTapRegionType) {
-    TapTapRegionTypeCN = 0, // 国内
-    TapTapRegionTypeOverseas = 1  // 海外
+    TapTapRegionTypeCN = 0,      // 国内
+    TapTapRegionTypeOverseas = 1 // 海外
 };
 
 @protocol TapTapSdkBaseOptions <NSObject>
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, TapTapRegionType) {
 
 @end
 
-@interface TapTapSdkOptions: NSObject <TapTapSdkBaseOptions>
+@interface TapTapSdkOptions : NSObject <TapTapSdkBaseOptions>
 
 @property (nonatomic, copy) NSString *clientId;
 @property (nonatomic, copy) NSString *clientToken;
@@ -49,15 +49,14 @@ typedef NS_ENUM(NSInteger, TapTapRegionType) {
 @property (nonatomic, assign) BOOL overrideBuiltInParameters;
 
 /// 是否可以获取 IDFA，默认值为 false
-@property(nonatomic, assign) BOOL enableAdvertiserIDCollection;
+@property (nonatomic, assign) BOOL enableAdvertiserIDCollection;
 
 /// 是否自动上报苹果内购支付成功事件
-@property(nonatomic, assign) BOOL enableAutoIAPEvent;
+@property (nonatomic, assign) BOOL enableAutoIAPEvent;
 
 /// 是否开启 log，建议 Debug 开启，Release 关闭，默认关闭 log
 @property (nonatomic, assign) BOOL enableLog;
 @end
-
 
 @interface TapTapSDK : NSObject
 
@@ -67,12 +66,12 @@ typedef NS_ENUM(NSInteger, TapTapRegionType) {
 /// 初始化
 /// - Parameter coreOption: 核心库配置
 /// - Parameter otherOptions: 其他库配置
-+ (void)initWithOptions:(TapTapSdkOptions *)coreOption otherOptions:(NSArray<id<TapTapSdkBaseOptions>> * _Nullable)otherOptions;
++ (void)initWithOptions:(TapTapSdkOptions *)coreOption
+           otherOptions:(NSArray<id<TapTapSdkBaseOptions>> *_Nullable)otherOptions;
 
 /// 初始化
 /// - Parameter coreOption: 核心库配置
 + (void)initWithOptions:(TapTapSdkOptions *)coreOption;
-
 
 /// 切换语言
 /// - Parameter language: 要切换的语言
@@ -81,7 +80,8 @@ typedef NS_ENUM(NSInteger, TapTapRegionType) {
 /// 检查初始化状态
 /// - Return    0：初始化信息正常 （TAPSDK_INIT_STATE_SUCCESS）
 ///         -1： 未初始化 （TAPSDK_INIT_STATE_EMPTY）
-///         -2： 应用 bundleId 与 clientID 或 clientToken 不匹配 （TAPSDK_INIT_STATE_INVALID）
+///         -2： 应用 bundleId 与 clientID 或 clientToken 不匹配
+///         （TAPSDK_INIT_STATE_INVALID）
 + (int)checkInitState;
 
 @end

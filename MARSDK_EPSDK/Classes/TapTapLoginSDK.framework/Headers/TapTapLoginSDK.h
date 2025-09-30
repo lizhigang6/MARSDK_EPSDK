@@ -13,5 +13,5 @@ FOUNDATION_EXPORT double TapTapLoginVersionNumber;
 //! Project version string for TapTapLoginSDK.
 FOUNDATION_EXPORT const unsigned char TapTapLoginVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <TapTapLoginSDK/PublicHeader.h>
-
+// In this header, you should import all the public headers of your framework
+// using statements like #import <TapTapLoginSDK/PublicHeader.h>

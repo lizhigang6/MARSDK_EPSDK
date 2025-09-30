@@ -26,13 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)getAppVersion;
 
-//获取网络状态
+// 获取网络状态
 + (NSString *)getNetWorkStatus:(NSString *)hostName;
 
 + (NSString *)getNetworkType;
 
 + (int)getNetWorkType:(NSString *)hostName;
-
 
 @end
 

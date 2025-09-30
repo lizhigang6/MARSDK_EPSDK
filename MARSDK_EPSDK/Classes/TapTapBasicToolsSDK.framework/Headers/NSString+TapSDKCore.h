@@ -11,7 +11,7 @@
 @interface NSString (TapSDKCore)
 - (NSString *)tds_URLEncodedString;
 - (NSString *)tds_URLDecodedString;
-///反转字符串
+/// 反转字符串
 - (NSString *)tds_reverse;
 
 // MD5 hash of the file on the filesystem specified by path

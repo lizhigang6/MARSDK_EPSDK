@@ -1,11 +1,11 @@
 
 //  https://github.com/robbiehanson/CocoaAsyncSocket
 //
-#import <Foundation/Foundation.h>
-#import <Security/Security.h>
-#import <Security/SecureTransport.h>
-#import <dispatch/dispatch.h>
 #import <Availability.h>
+#import <Foundation/Foundation.h>
+#import <Security/SecureTransport.h>
+#import <Security/Security.h>
+#import <dispatch/dispatch.h>
 
 #include <sys/socket.h> // AF_INET, AF_INET6
 
@@ -27,7 +27,7 @@ extern NSString *const EAGCDAsyncSocketThreadName;
 extern NSString *const EAGCDAsyncSocketManuallyEvaluateTrust;
 extern NSString *const EAGCDAsyncSocketUseCFStreamForTLS;
 
-#define GCDAsyncSocketSSLPeerName     (NSString *)kCFStreamSSLPeerName
+#define GCDAsyncSocketSSLPeerName (NSString *)kCFStreamSSLPeerName
 
 extern NSString *const EAGCDAsyncSocketSSLPeerID;
 extern NSString *const EAGCDAsyncSocketSSLProtocolVersionMin;
@@ -39,31 +39,34 @@ extern NSString *const EAGCDAsyncSocketSSLCipherSuites;
 #define GCDAsyncSocketLoggingContext 65535
 
 typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
-	GCDAsyncSocketNoError = 0,           // Never used
-	GCDAsyncSocketBadConfigError,        // Invalid configuration
-	GCDAsyncSocketBadParamError,         // Invalid parameter was passed
-	GCDAsyncSocketConnectTimeoutError,   // A connect operation timed out
-	GCDAsyncSocketReadTimeoutError,      // A read operation timed out
-	GCDAsyncSocketWriteTimeoutError,     // A write operation timed out
-	GCDAsyncSocketReadMaxedOutError,     // Reached set maxLength without completing
-	GCDAsyncSocketClosedError,           // The remote peer closed the connection
-	GCDAsyncSocketOtherError,            // Description provided in userInfo
+    GCDAsyncSocketNoError = 0,         // Never used
+    GCDAsyncSocketBadConfigError,      // Invalid configuration
+    GCDAsyncSocketBadParamError,       // Invalid parameter was passed
+    GCDAsyncSocketConnectTimeoutError, // A connect operation timed out
+    GCDAsyncSocketReadTimeoutError,    // A read operation timed out
+    GCDAsyncSocketWriteTimeoutError,   // A write operation timed out
+    GCDAsyncSocketReadMaxedOutError,   // Reached set maxLength without completing
+    GCDAsyncSocketClosedError,         // The remote peer closed the connection
+    GCDAsyncSocketOtherError,          // Description provided in userInfo
 };
 
 #pragma mark -
 
 @interface EAccountGCDAsyncSocket : NSObject
 
-- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq;
-- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq socketQueue:(nullable dispatch_queue_t)sq;
+- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate
+                   delegateQueue:(nullable dispatch_queue_t)dq;
+- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate
+                   delegateQueue:(nullable dispatch_queue_t)dq
+                     socketQueue:(nullable dispatch_queue_t)sq;
 
 #pragma mark Configuration
 
 @property (atomic, weak, readwrite, nullable) id<GCDAsyncSocketDelegate> delegate;
 @property (atomic, strong, readwrite, nullable) dispatch_queue_t delegateQueue;
 
-- (void)setDelegate:(nullable id<GCDAsyncSocketDelegate>)delegate delegateQueue:(nullable dispatch_queue_t)delegateQueue;
-
+- (void)setDelegate:(nullable id<GCDAsyncSocketDelegate>)delegate
+      delegateQueue:(nullable dispatch_queue_t)delegateQueue;
 
 @property (atomic, assign, readwrite, getter=isIPv4Enabled) BOOL IPv4Enabled;
 @property (atomic, assign, readwrite, getter=isIPv6Enabled) BOOL IPv6Enabled;
@@ -95,8 +98,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
 @property (atomic, readonly) BOOL isConnected;
 
 @property (atomic, readonly, nullable) NSString *connectedHost;
-@property (atomic, readonly) uint16_t  connectedPort;
-
+@property (atomic, readonly) uint16_t connectedPort;
 
 @property (atomic, readonly) BOOL isIPv4;
 @property (atomic, readonly) BOOL isIPv6;
@@ -119,7 +121,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
 
 #pragma mark Security
 
-- (void)startTLS:(nullable NSDictionary <NSString*,NSObject*>*)tlsSettings;
+- (void)startTLS:(nullable NSDictionary<NSString *, NSObject *> *)tlsSettings;
 
 #pragma mark Advanced
 - (int)socketFD;
@@ -152,21 +154,24 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
 - (void)socket:(EAccountGCDAsyncSocket *)sock didWriteDataWithTag:(long)tag;
 - (void)socket:(EAccountGCDAsyncSocket *)sock didWritePartialDataOfLength:(NSUInteger)partialLength tag:(long)tag;
 
-- (NSTimeInterval)socket:(EAccountGCDAsyncSocket *)sock shouldTimeoutReadWithTag:(long)tag
-                                                                 elapsed:(NSTimeInterval)elapsed
-                                                               bytesDone:(NSUInteger)length;
+- (NSTimeInterval)socket:(EAccountGCDAsyncSocket *)sock
+    shouldTimeoutReadWithTag:(long)tag
+                     elapsed:(NSTimeInterval)elapsed
+                   bytesDone:(NSUInteger)length;
 
-- (NSTimeInterval)socket:(EAccountGCDAsyncSocket *)sock shouldTimeoutWriteWithTag:(long)tag
-                                                                  elapsed:(NSTimeInterval)elapsed
-                                                                bytesDone:(NSUInteger)length;
+- (NSTimeInterval)socket:(EAccountGCDAsyncSocket *)sock
+    shouldTimeoutWriteWithTag:(long)tag
+                      elapsed:(NSTimeInterval)elapsed
+                    bytesDone:(NSUInteger)length;
 - (void)socketDidCloseReadStream:(EAccountGCDAsyncSocket *)sock;
 
 - (void)socketDidDisconnect:(EAccountGCDAsyncSocket *)sock withError:(nullable NSError *)err;
 
 - (void)socketDidSecure:(EAccountGCDAsyncSocket *)sock;
 
-- (void)socket:(EAccountGCDAsyncSocket *)sock didReceiveTrust:(SecTrustRef)trust
-                                    completionHandler:(void (^)(BOOL shouldTrustPeer))completionHandler;
+- (void)socket:(EAccountGCDAsyncSocket *)sock
+      didReceiveTrust:(SecTrustRef)trust
+    completionHandler:(void (^)(BOOL shouldTrustPeer))completionHandler;
 
 @end
 NS_ASSUME_NONNULL_END

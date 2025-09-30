@@ -1,12 +1,11 @@
 // TapSDKProgressHUD
 
+#import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <CoreGraphics/CoreGraphics.h>
 
 @class TapSDKBackgroundView;
 @protocol TapSDKProgressHUDDelegate;
-
 
 extern CGFloat const TapSDKProgressMaxOffset;
 
@@ -28,7 +27,8 @@ typedef NS_ENUM(NSInteger, TapSDKProgressHUDMode) {
 typedef NS_ENUM(NSInteger, TapSDKProgressHUDAnimation) {
     /// Opacity animation
     TapSDKProgressHUDAnimationFade,
-    /// Opacity + scale animation (zoom in when appearing zoom out when disappearing)
+    /// Opacity + scale animation (zoom in when appearing zoom out when
+    /// disappearing)
     TapSDKProgressHUDAnimationZoom,
     /// Opacity + scale animation (zoom out style)
     TapSDKProgressHUDAnimationZoomOut,
@@ -45,30 +45,35 @@ typedef NS_ENUM(NSInteger, TapSDKProgressHUDBackgroundStyle) {
 
 typedef void (^TapSDKProgressHUDCompletionBlock)(void);
 
-
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
- * Displays a simple HUD window containing a progress indicator and two optional labels for short messages.
+ * Displays a simple HUD window containing a progress indicator and two optional
+ * labels for short messages.
  *
- * This is a simple drop-in class for displaying a progress HUD view similar to Apple's private UIProgressHUD class.
- * The XDGProgressHUD window spans over the entire space given to it by the initWithFrame: constructor and catches all
- * user input on this region, thereby preventing the user operations on components below the view.
+ * This is a simple drop-in class for displaying a progress HUD view similar to
+ * Apple's private UIProgressHUD class. The XDGProgressHUD window spans over the
+ * entire space given to it by the initWithFrame: constructor and catches all
+ * user input on this region, thereby preventing the user operations on
+ * components below the view.
  *
- * @note To still allow touches to pass through the HUD, you can set hud.userInteractionEnabled = NO.
- * @attention XDGProgressHUD is a UI class and should therefore only be accessed on the main thread.
+ * @note To still allow touches to pass through the HUD, you can set
+ * hud.userInteractionEnabled = NO.
+ * @attention XDGProgressHUD is a UI class and should therefore only be accessed
+ * on the main thread.
  */
 @interface TapSDKProgressHUD : UIView
 
 /**
- * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
+ * Creates a new HUD, adds it to provided view and shows it. The counterpart to
+ * this method is hideHUDForView:animated:.
  *
- * @note This method sets removeFromSuperViewOnHide. The HUD will automatically be removed from the view hierarchy when hidden.
+ * @note This method sets removeFromSuperViewOnHide. The HUD will automatically
+ * be removed from the view hierarchy when hidden.
  *
  * @param view The view that the HUD will be added to
- * @param animated If set to YES the HUD will appear using the current animationType. If set to NO the HUD will not use
- * animations while appearing.
+ * @param animated If set to YES the HUD will appear using the current
+ * animationType. If set to NO the HUD will not use animations while appearing.
  * @return A reference to the created HUD.
  *
  * @see hideHUDForView:animated:
@@ -79,13 +84,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Showing and hiding
 
 /**
- * Finds the top-most HUD subview that hasn't finished and hides it. The counterpart to this method is showHUDAddedTo:animated:.
+ * Finds the top-most HUD subview that hasn't finished and hides it. The
+ * counterpart to this method is showHUDAddedTo:animated:.
  *
- * @note This method sets removeFromSuperViewOnHide. The HUD will automatically be removed from the view hierarchy when hidden.
+ * @note This method sets removeFromSuperViewOnHide. The HUD will automatically
+ * be removed from the view hierarchy when hidden.
  *
  * @param view The view that is going to be searched for a HUD subview.
- * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
- * animations while disappearing.
+ * @param animated If set to YES the HUD will disappear using the current
+ * animationType. If set to NO the HUD will not use animations while
+ * disappearing.
  * @return YES if a HUD was found and removed, NO otherwise.
  *
  * @see showHUDAddedTo:animated:
@@ -102,45 +110,52 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable TapSDKProgressHUD *)HUDForView:(UIView *)view NS_SWIFT_NAME(forView(_:));
 
 /**
- * A convenience constructor that initializes the HUD with the view's bounds. Calls the designated constructor with
- * view.bounds as the parameter.
+ * A convenience constructor that initializes the HUD with the view's bounds.
+ * Calls the designated constructor with view.bounds as the parameter.
  *
- * @param view The view instance that will provide the bounds for the HUD. Should be the same instance as
- * the HUD's superview (i.e., the view that the HUD will be added to).
+ * @param view The view instance that will provide the bounds for the HUD.
+ * Should be the same instance as the HUD's superview (i.e., the view that the
+ * HUD will be added to).
  */
 - (instancetype)initWithView:(UIView *)view;
 
 /**
  * Displays the HUD.
  *
- * @note You need to make sure that the main thread completes its run loop soon after this method call so that
- * the user interface can be updated. Call this method when your task is already set up to be executed in a new thread
- * (e.g., when using something like NSOperation or making an asynchronous call like NSURLRequest).
+ * @note You need to make sure that the main thread completes its run loop soon
+ * after this method call so that the user interface can be updated. Call this
+ * method when your task is already set up to be executed in a new thread (e.g.,
+ * when using something like NSOperation or making an asynchronous call like
+ * NSURLRequest).
  *
- * @param animated If set to YES the HUD will appear using the current animationType. If set to NO the HUD will not use
- * animations while appearing.
+ * @param animated If set to YES the HUD will appear using the current
+ * animationType. If set to NO the HUD will not use animations while appearing.
  *
  * @see animationType
  */
 - (void)showAnimated:(BOOL)animated;
 
 /**
- * Hides the HUD. This still calls the hudWasHidden: delegate. This is the counterpart of the show: method. Use it to
- * hide the HUD when your task completes.
+ * Hides the HUD. This still calls the hudWasHidden: delegate. This is the
+ * counterpart of the show: method. Use it to hide the HUD when your task
+ * completes.
  *
- * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
- * animations while disappearing.
+ * @param animated If set to YES the HUD will disappear using the current
+ * animationType. If set to NO the HUD will not use animations while
+ * disappearing.
  *
  * @see animationType
  */
 - (void)hideAnimated:(BOOL)animated;
 
 /**
- * Hides the HUD after a delay. This still calls the hudWasHidden: delegate. This is the counterpart of the show: method. Use it to
- * hide the HUD when your task completes.
+ * Hides the HUD after a delay. This still calls the hudWasHidden: delegate.
+ * This is the counterpart of the show: method. Use it to hide the HUD when your
+ * task completes.
  *
- * @param animated If set to YES the HUD will disappear using the current animationType. If set to NO the HUD will not use
- * animations while disappearing.
+ * @param animated If set to YES the HUD will disappear using the current
+ * animationType. If set to NO the HUD will not use animations while
+ * disappearing.
  * @param delay Delay in seconds until the HUD is hidden.
  *
  * @see animationType
@@ -158,13 +173,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nullable) TapSDKProgressHUDCompletionBlock completionBlock;
 
 /**
- * Grace period is the time (in seconds) that the invoked method may be run without
- * showing the HUD. If the task finishes before the grace time runs out, the HUD will
- * not be shown at all.
- * This may be used to prevent HUD display for very short tasks.
- * Defaults to 0 (no grace time).
- * @note The graceTime needs to be set before the hud is shown. You thus can't use `showHUDAddedTo:animated:`,
- * but instead need to alloc / init the HUD, configure the grace time and than show it manually.
+ * Grace period is the time (in seconds) that the invoked method may be run
+ * without showing the HUD. If the task finishes before the grace time runs out,
+ * the HUD will not be shown at all. This may be used to prevent HUD display for
+ * very short tasks. Defaults to 0 (no grace time).
+ * @note The graceTime needs to be set before the hud is shown. You thus can't
+ * use `showHUDAddedTo:animated:`, but instead need to alloc / init the HUD,
+ * configure the grace time and than show it manually.
  */
 @property (assign, nonatomic) NSTimeInterval graceTime;
 
@@ -184,14 +199,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Appearance
 
 /**
- * XDGProgressHUD operation mode. The default is TapSDKProgressHUDModeIndeterminate.
+ * XDGProgressHUD operation mode. The default is
+ * TapSDKProgressHUDModeIndeterminate.
  */
 @property (assign, nonatomic) TapSDKProgressHUDMode mode;
 
 /**
- * A color that gets forwarded to all labels and supported indicators. Also sets the tintColor
- * for custom views on iOS 7+. Set to nil to manage color individually.
- * Defaults to semi-translucent black on iOS 7 and later and white on earlier iOS versions.
+ * A color that gets forwarded to all labels and supported indicators. Also sets
+ * the tintColor for custom views on iOS 7+. Set to nil to manage color
+ * individually. Defaults to semi-translucent black on iOS 7 and later and white
+ * on earlier iOS versions.
  */
 @property (strong, nonatomic, nullable) UIColor *contentColor UI_APPEARANCE_SELECTOR;
 
@@ -201,16 +218,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) TapSDKProgressHUDAnimation animationType UI_APPEARANCE_SELECTOR;
 
 /**
- * The bezel offset relative to the center of the view. You can use TapSDKProgressMaxOffset
- * and -TapSDKProgressMaxOffset to move the HUD all the way to the screen edge in each direction.
- * E.g., CGPointMake(0.f, TapSDKProgressMaxOffset) would position the HUD centered on the bottom edge.
+ * The bezel offset relative to the center of the view. You can use
+ * TapSDKProgressMaxOffset and -TapSDKProgressMaxOffset to move the HUD all the
+ * way to the screen edge in each direction. E.g., CGPointMake(0.f,
+ * TapSDKProgressMaxOffset) would position the HUD centered on the bottom edge.
  */
 @property (assign, nonatomic) CGPoint offset UI_APPEARANCE_SELECTOR;
 
 /**
- * The amount of space between the HUD edge and the HUD elements (labels, indicators or custom views).
- * This also represents the minimum bezel distance to the edge of the HUD view.
- * Defaults to 20.f
+ * The amount of space between the HUD edge and the HUD elements (labels,
+ * indicators or custom views). This also represents the minimum bezel distance
+ * to the edge of the HUD view. Defaults to 20.f
  */
 @property (assign, nonatomic) CGFloat margin UI_APPEARANCE_SELECTOR;
 
@@ -218,7 +236,6 @@ NS_ASSUME_NONNULL_BEGIN
  Defaults to 13.f
 */
 @property (assign, nonatomic) CGFloat verticalMargin UI_APPEARANCE_SELECTOR;
-
 
 /**
  * The minimum size of the HUD bezel. Defaults to CGSizeZero (no minimum size).
@@ -228,15 +245,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Force the HUD dimensions to be equal if possible.
  */
-@property (assign, nonatomic, getter = isSquare) BOOL square UI_APPEARANCE_SELECTOR;
+@property (assign, nonatomic, getter=isSquare) BOOL square UI_APPEARANCE_SELECTOR;
 
 /**
- * When enabled, the bezel center gets slightly affected by the device accelerometer data.
- * Defaults to NO.
+ * When enabled, the bezel center gets slightly affected by the device
+ * accelerometer data. Defaults to NO.
  *
- * @note This can cause main thread checker assertions on certain devices. https://github.com/jdg/XDGProgressHUD/issues/552
+ * @note This can cause main thread checker assertions on certain devices.
+ * https://github.com/jdg/XDGProgressHUD/issues/552
  */
-@property (assign, nonatomic, getter=areDefaultMotionEffectsEnabled) BOOL defaultMotionEffectsEnabled UI_APPEARANCE_SELECTOR;
+@property (assign, nonatomic, getter=areDefaultMotionEffectsEnabled)
+    BOOL defaultMotionEffectsEnabled UI_APPEARANCE_SELECTOR;
 
 /// @name Progress
 
@@ -248,7 +267,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name ProgressObject
 
 /**
- * The NSProgress object feeding the progress information to the progress indicator.
+ * The NSProgress object feeding the progress information to the progress
+ * indicator.
  */
 @property (strong, nonatomic, nullable) NSProgress *progressObject;
 
@@ -257,37 +277,40 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The view containing the labels and indicator (or customView).
  */
-@property (strong, nonatomic, readonly)TapSDKBackgroundView *bezelView;
+@property (strong, nonatomic, readonly) TapSDKBackgroundView *bezelView;
 
 /**
  * View covering the entire HUD area, placed behind bezelView.
  */
-@property (strong, nonatomic, readonly)TapSDKBackgroundView *backgroundView;
+@property (strong, nonatomic, readonly) TapSDKBackgroundView *backgroundView;
 
 /**
- * The UIView (e.g., a UIImageView) to be shown when the HUD is in TapSDKProgressHUDModeCustomView.
- * The view should implement intrinsicContentSize for proper sizing. For best results use approximately 37 by 37 pixels.
+ * The UIView (e.g., a UIImageView) to be shown when the HUD is in
+ * TapSDKProgressHUDModeCustomView. The view should implement
+ * intrinsicContentSize for proper sizing. For best results use approximately 37
+ * by 37 pixels.
  */
 @property (strong, nonatomic, nullable) UIView *customView;
 
 /**
- * A label that holds an optional short message to be displayed below the activity indicator. The HUD is automatically resized to fit
- * the entire text.
+ * A label that holds an optional short message to be displayed below the
+ * activity indicator. The HUD is automatically resized to fit the entire text.
  */
 @property (strong, nonatomic, readonly) UILabel *label;
 
 /**
- * A label that holds an optional details message displayed below the labelText message. The details text can span multiple lines.
+ * A label that holds an optional details message displayed below the labelText
+ * message. The details text can span multiple lines.
  */
 @property (strong, nonatomic, readonly) UILabel *detailsLabel;
 
 /**
- * A button that is placed below the labels. Visible only if a target / action is added and a title is assigned..
+ * A button that is placed below the labels. Visible only if a target / action
+ * is added and a title is assigned..
  */
 @property (strong, nonatomic, readonly) UIButton *button;
 
 @end
-
 
 @protocol TapSDKProgressHUDDelegate <NSObject>
 
@@ -300,9 +323,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
 /**
- * A progress view for showing definite progress by filling up a circle (pie chart).
+ * A progress view for showing definite progress by filling up a circle (pie
+ * chart).
  */
 @interface XDGRoundProgressView : UIView
 
@@ -327,10 +350,9 @@ NS_ASSUME_NONNULL_BEGIN
 /*
  * Display mode - NO = round or YES = annular. Defaults to round.
  */
-@property (nonatomic, assign, getter = isAnnular) BOOL annular;
+@property (nonatomic, assign, getter=isAnnular) BOOL annular;
 
 @end
-
 
 /**
  * A flat bar progress view.
@@ -361,7 +383,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *progressColor;
 
 @end
-
 
 @interface TapSDKBackgroundView : UIView
 

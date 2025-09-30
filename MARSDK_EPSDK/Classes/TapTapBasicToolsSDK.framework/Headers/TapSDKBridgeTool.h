@@ -25,4 +25,3 @@
 + (NSDictionary *)dictionaryWithModel:(id)model;
 
 @end
-

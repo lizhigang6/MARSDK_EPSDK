@@ -13,15 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TapSDKCoreUIHelper : NSObject
 
 /// rgb转color
-+ (UIColor *)rgbToColorWithRed:(CGFloat)red
-                         green:(CGFloat)green
-                          blue:(CGFloat)blue;
++ (UIColor *)rgbToColorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
 
 /// rgba转color
-+ (UIColor *)rgbToColorWithRed:(CGFloat)red
-                         green:(CGFloat)green
-                          blue:(CGFloat)blue
-                         aplha:(CGFloat)alpha;
++ (UIColor *)rgbToColorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue aplha:(CGFloat)alpha;
 
 /// hex转color
 + (UIColor *)hexToColor:(int)hexValue;

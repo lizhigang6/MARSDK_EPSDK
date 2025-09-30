@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TapSDKVerifyHandler : NSObject
 
 /// 在对外接口中添加前置校验
-+(void)aspectTapSDKApi;
++ (void)aspectTapSDKApi;
 
 @end
 

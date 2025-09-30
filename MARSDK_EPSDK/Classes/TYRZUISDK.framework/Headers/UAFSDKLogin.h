@@ -13,7 +13,7 @@
 @class UAFCustomModel;
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
+typedef void (^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
 
 @protocol UAFSDKLoginDelegate <NSObject>
 
@@ -28,7 +28,7 @@ typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
 /**
  SDK登录单例管理
  */
-@property (nonatomic,class,readonly) UAFSDKLogin *shareLogin;
+@property (nonatomic, class, readonly) UAFSDKLogin *shareLogin;
 
 /**
  网络类型及运营商（双卡下，获取上网卡的运营商）
@@ -36,16 +36,16 @@ typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
  "networkType" 网络类型： 0.无网络/ 1.数据流量 / 2.wifi / 3.数据+wifi
  @return  @{NSString : NSNumber}
  */
-@property (nonatomic,readonly) NSDictionary<NSString *, NSNumber *> *networkInfo;
+@property (nonatomic, readonly) NSDictionary<NSString *, NSNumber *> *networkInfo;
 
 /**
 授权登陆的delegate
  */
-@property (nonatomic,weak) id<UAFSDKLoginDelegate> delegate;
+@property (nonatomic, weak) id<UAFSDKLoginDelegate> delegate;
 
 /**
  初始化SDK参数
- 
+
  @param appId 申请能力平台成功后，分配的appId
  @param appKey 申请能力平台成功后，分配的appKey
  */
@@ -63,11 +63,11 @@ typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
 
  @param completion 回调
  */
-- (void)getPhoneNumberCompletion:(void(^)(NSDictionary *_Nonnull result))completion;
+- (void)getPhoneNumberCompletion:(void (^)(NSDictionary *_Nonnull result))completion;
 
 /**
  一键登录，获取到的token，可传给移动认证服务端获取完整手机号
- 
+
  @param model 需要配置的Model属性（控制器必传）
  @param completion 回调
  */
@@ -78,22 +78,21 @@ typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
 
  @param completion 回调
  */
-- (void)mobileAuthCompletion:(void(^)(NSDictionary *_Nonnull result))completion;
+- (void)mobileAuthCompletion:(void (^)(NSDictionary *_Nonnull result))completion;
 
 /**
  删除取号缓存数据 + 重置网络开关（自定义按钮事件里dimiss授权界面需调用）
- 
+
  @return YES：有缓存已执行删除操作，NO：无缓存不执行删除操作
  */
 - (BOOL)delectScrip;
 
 /**
  控制台日志输出控制（默认关闭）
- 
+
  @param enable 开关参数
  */
 - (void)printConsoleEnable:(BOOL)enable;
-
 
 /**
  关闭授权界面
@@ -101,7 +100,7 @@ typedef void(^UAFContinueLoginEvent)(BOOL shouldContinueLogin);
  @param completion 回调参数
 
  */
-- (void)ua_dismissViewControllerAnimated:(BOOL)flag completion: (void (^ __nullable)(void))completion;
+- (void)ua_dismissViewControllerAnimated:(BOOL)flag completion:(void (^__nullable)(void))completion;
 
 @end
 

@@ -9,18 +9,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSString* _Nullable (^DynamicPropertiesDelegate)(void);
+typedef NSString *_Nullable (^DynamicPropertiesDelegate)(void);
 
 @interface TapTapSDKBasicLogUtils : NSObject
 
 /// 应用启动
-+ (BOOL) onAppStarted:(NSString *) appConfig dynamicPropertiesDelegate :(DynamicPropertiesDelegate) dynamicPropertiesDelegate;
++ (BOOL)onAppStarted:(NSString *)appConfig
+    dynamicPropertiesDelegate:(DynamicPropertiesDelegate)dynamicPropertiesDelegate;
 
 /// 启用功能模块，如：app_duration
-+ (void) enableModules:(NSArray<NSString*> *) modulesArray;
++ (void)enableModules:(NSArray<NSString *> *)modulesArray;
 
 /// 禁用功能模块，如：app_duration
-+ (void) disableModules:(NSArray<NSString*> *) modulesArray;
++ (void)disableModules:(NSArray<NSString *> *)modulesArray;
 
 /// 发送业务日志，例如
 // {
@@ -32,33 +33,31 @@ typedef NSString* _Nullable (^DynamicPropertiesDelegate)(void);
 ///
 /// - Parameter params: 埋点参数
 ///
-+ (void) sendBusinessLog:(NSDictionary *) params;
++ (void)sendBusinessLog:(NSDictionary *)params;
 
 /// 发送技术日志，只对海外生效
-+ (void) sendTechnologyLog:(NSDictionary *) params;
++ (void)sendTechnologyLog:(NSDictionary *)params;
 
 /// 用户登录
 /// - Parameter userInfo : JSON 格式：{"open_id":"","tds_user_id":""}
-+ (void) onLogin:(NSString *) userInfo;
++ (void)onLogin:(NSString *)userInfo;
 
-+ (void) onLogout;
++ (void)onLogout;
 
-+ (void) onBackground;
++ (void)onBackground;
 
-+ (void) onForeground;
++ (void)onForeground;
 
 /// 设置额外的时长模块日志参数，每次调用这个接口时，会用最新得到的参数，替换原有参数
-+ (void) setExtraAppDurationParams:(NSDictionary *) params;
++ (void)setExtraAppDurationParams:(NSDictionary *)params;
 
-+ (void) setLogLevel: (int) logLevel logToConsole:(int) logToConsole;
++ (void)setLogLevel:(int)logLevel logToConsole:(int)logToConsole;
 
 /// 获取 openlog so 库版本号
-+ (NSString *) getVersion;
++ (NSString *)getVersion;
 
 /// 应用退出
-+ (void) onAppStoped;
-
-
++ (void)onAppStoped;
 
 @end
 

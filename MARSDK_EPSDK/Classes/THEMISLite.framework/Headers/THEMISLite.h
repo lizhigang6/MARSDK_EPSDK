@@ -11,11 +11,12 @@
 #include <stdio.h>
 
 #ifdef __cplusplus
-extern "C" {
-void init_themis(const char* host);
-void set_adid(const char* id,int32_t id_length);
-const char* get_oneid_data();
-void set_previous_oneid(const char* oneid,int32_t length);
+extern "C"
+{
+    void init_themis(const char *host);
+    void set_adid(const char *id, int32_t id_length);
+    const char *get_oneid_data();
+    void set_previous_oneid(const char *oneid, int32_t length);
 }
 #endif
 
@@ -27,10 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface THEMIS : NSObject
 
-+(void)initTHEMIS:(NSString*)host;
-+(void)setADID:(NSString*)id length:(int)length;
-+(NSString*)getOneIdData;
-+(void)setPreviousOneId:(NSString*)oneid length:(int)length;
++ (void)initTHEMIS:(NSString *)host;
++ (void)setADID:(NSString *)id length:(int)length;
++ (NSString *)getOneIdData;
++ (void)setPreviousOneId:(NSString *)oneid length:(int)length;
 
 @end
 

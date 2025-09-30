@@ -13,9 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)showTip:(NSString *)tip;
 
-+ (void)showTip:(NSString *)tip bundleName:(NSString *)bundleName imageName:(NSString *) imageName;
++ (void)showTip:(NSString *)tip bundleName:(NSString *)bundleName imageName:(NSString *)imageName;
 
-+ (void)showTip:(NSString *)tip bundleName:(NSString *)bundleName imageName:(NSString *) imageName timeInterval:(NSTimeInterval)timeInterval;
++ (void)showTip:(NSString *)tip
+      bundleName:(NSString *)bundleName
+       imageName:(NSString *)imageName
+    timeInterval:(NSTimeInterval)timeInterval;
 
 @end
 

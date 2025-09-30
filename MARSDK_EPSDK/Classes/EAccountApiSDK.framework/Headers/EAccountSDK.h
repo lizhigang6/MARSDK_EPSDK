@@ -10,21 +10,21 @@
  定制版SDK v4.5.0 20230518
  */
 
-#import <Foundation/Foundation.h>
-#import "EAccountPreLoginConfigModel.h"
 #import "EAccountCTEConfig.h"
+#import "EAccountPreLoginConfigModel.h"
+#import <Foundation/Foundation.h>
 
 /**
  声明一个block
  @param resultDic 网络返回的data的解析结果
  */
-typedef   void (^successHandler) (NSDictionary * _Nonnull resultDic);
+typedef void (^successHandler)(NSDictionary *_Nonnull resultDic);
 
 /**
  声明一个block
  @param error 网络返回的错误或者其它错误
  */
-typedef   void (^failureHandler) (NSError * _Nonnull error);
+typedef void (^failureHandler)(NSError *_Nonnull error);
 
 @interface EAccountSDK : NSObject
 
@@ -33,15 +33,14 @@ typedef   void (^failureHandler) (NSError * _Nonnull error);
  @param appKey 接入方在账号平台领取的appId
  @param appSecrect 接入方在账号平台领取的appSecrect
  */
-+ (void)initWithSelfKey:(NSString * _Nonnull)appKey
-              appSecret:(NSString * _Nonnull)appSecrect;
++ (void)initWithSelfKey:(NSString *_Nonnull)appKey appSecret:(NSString *_Nonnull)appSecrect;
 
 /**
  *@description 预登录接口
  @param model 接口超时时间配置
  */
 
-+ (void)requestPRELogin:(EAccountPreLoginConfigModel * _Nonnull)model
++ (void)requestPRELogin:(EAccountPreLoginConfigModel *_Nonnull)model
              completion:(nonnull successHandler)completion
                 failure:(nonnull failureHandler)fail;
 
@@ -53,7 +52,8 @@ typedef   void (^failureHandler) (NSError * _Nonnull error);
 
 /**
 @description   获取当前流量卡运营商信息
-@return NSString    "CT"    中国电信 / "CM"     中国移动 / "CU"     中国联联通 / "UN"    未知
+@return NSString    "CT"    中国电信 / "CM"     中国移动 / "CU"     中国联联通 /
+"UN"    未知
 */
 + (NSString *)getOperatorType;
 
@@ -68,7 +68,8 @@ typedef   void (^failureHandler) (NSError * _Nonnull error);
  */
 + (void)requestPreLogin:(NSTimeInterval)apiTimeoutInterval
              completion:(nonnull successHandler)completion
-                failure:(nonnull failureHandler)fail DEPRECATED_MSG_ATTRIBUTE("Please use `requestPRELogin:completion:failure:` instead");
+                failure:(nonnull failureHandler)fail
+    DEPRECATED_MSG_ATTRIBUTE("Please use `requestPRELogin:completion:failure:` instead");
 
 /**
  @description 预登录接口 已废弃
@@ -76,12 +77,13 @@ typedef   void (^failureHandler) (NSError * _Nonnull error);
  */
 + (void)getMobileCodeWithTimeout:(NSTimeInterval)apiTimeoutInterval
                       completion:(nonnull successHandler)completion
-                         failure:(nonnull failureHandler)fail DEPRECATED_MSG_ATTRIBUTE("Please use `requestPreLogin:completion:failure:` instead");
+                         failure:(nonnull failureHandler)fail
+    DEPRECATED_MSG_ATTRIBUTE("Please use `requestPreLogin:completion:failure:` instead");
 
-+ (void)setDomainName:(EAccountCTEConfig * _Nonnull)config;
++ (void)setDomainName:(EAccountCTEConfig *_Nonnull)config;
 
-#pragma -mark ----------------other method-----------------------
+#pragma - mark-- -- -- -- -- -- -- --other method-- -- -- -- -- -- -- -- -- -- -- -
 
-+ (void)startReportLog:(NSMutableDictionary * _Nonnull)logDic;
++ (void)startReportLog:(NSMutableDictionary *_Nonnull)logDic;
 
 @end

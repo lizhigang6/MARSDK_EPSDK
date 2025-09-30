@@ -20,8 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - userID: 接入方的用户 ID
 ///   - properties: 此用户下对应的属性
-+ (void)setUserID:(NSString *)userID 
-       properties:(nullable NSDictionary *)properties;
++ (void)setUserID:(NSString *)userID properties:(nullable NSDictionary *)properties;
 
 /// 解除绑定用户 ID
 + (void)clearUser;
@@ -32,9 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 上报自定义事件(单事件总大小不超过 100K)
 /// - Parameters:
 ///   - name: 事件名
-///   - properties: 参数(单个 String 属性最大长度 256、Number 取值区间为 [-9E15, 9E15]
-+ (void)logEvent:(NSString *)name 
-      properties:(NSDictionary *)properties;
+///   - properties: 参数(单个 String 属性最大长度 256、Number 取值区间为 [-9E15,
+///   9E15]
++ (void)logEvent:(NSString *)name properties:(NSDictionary *)properties;
 
 /// 上报充值成功事件
 /// - Parameters:
@@ -43,13 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - amount: 充值金额（单位分，即无论什么币种，都需要乘以100）
 ///   - currencyType: 货币类型，可为空，参考：人民币 CNY，美元 USD；欧元 EUR
 ///   - paymentMethod: 支付方式，可为空，如：支付宝
-///   - properties: 事件属性，需要在控制后台预先进行配置,值为长度大于0并小于等于256的字符串或绝对值小于1E11的浮点数
+///   - properties:
+///   事件属性，需要在控制后台预先进行配置,值为长度大于0并小于等于256的字符串或绝对值小于1E11的浮点数
 + (void)logPurchasedEvent:(nullable NSString *)orderID
-           productName:(nullable NSString *)productName
-                amount:(NSInteger)amount
-          currencyType:(nullable NSString *)currencyType
-         paymentMethod:(nullable NSString *)paymentMethod
-            properties:(nullable NSDictionary *)properties;
+              productName:(nullable NSString *)productName
+                   amount:(NSInteger)amount
+             currencyType:(nullable NSString *)currencyType
+            paymentMethod:(nullable NSString *)paymentMethod
+               properties:(nullable NSDictionary *)properties;
 
 /// 初始化设备属性操作
 /// @param properties 属性字典
@@ -79,8 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameters:
 ///   - key: 属性 key
 ///   - value: 属性 value
-+ (void)addCommonProperty:(NSString *)key 
-                    value:(id)value;
++ (void)addCommonProperty:(NSString *)key value:(id)value;
 
 /// 增加多个通用参数
 /// - Parameter properties: 属性列表
@@ -99,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 添加动态事件属性，每次发送事件会调用dynamicPropertiesCaculator
 /// @param dynamicPropertiesCaculator 动态属性回调，需返回希望上传的属性字典
-+ (void)registerDynamicProperties:(NSDictionary* (^)(void))dynamicPropertiesCaculator;
++ (void)registerDynamicProperties:(NSDictionary * (^)(void))dynamicPropertiesCaculator;
 @end
 
 NS_ASSUME_NONNULL_END

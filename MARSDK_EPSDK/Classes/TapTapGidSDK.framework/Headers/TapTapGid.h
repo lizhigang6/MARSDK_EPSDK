@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^GidUpdateCallback)(NSString *gid);
+typedef void (^GidUpdateCallback)(NSString *gid);
 
 @interface TapTapGid : NSObject
 
@@ -26,7 +26,10 @@ typedef void(^GidUpdateCallback)(NSString *gid);
 ///   - clientToken: clientToken
 ///   - region: 地区，0 为国内，1 为海外
 ///   - caid: 仅国内 iOS 有，可为空
-+ (void)initWithClientId:(NSString *)clientId clientToken:(NSString *)clientToken region:(NSInteger)region caid:(NSString * _Nullable)caid;
++ (void)initWithClientId:(NSString *)clientId
+             clientToken:(NSString *)clientToken
+                  region:(NSInteger)region
+                    caid:(NSString *_Nullable)caid;
 
 /// 注册 Gid 更新回调
 /// - Parameters:

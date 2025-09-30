@@ -25,28 +25,28 @@
 
 #import <UIKit/UIKit.h>
 
-extern const NSString * CSTapSdkToastPositionTop;
-extern const NSString * CSTapSdkToastPositionCenter;
-extern const NSString * CSTapSdkToastPositionBottom;
+extern const NSString *CSTapSdkToastPositionTop;
+extern const NSString *CSTapSdkToastPositionCenter;
+extern const NSString *CSTapSdkToastPositionBottom;
 
 @class CSTapSdkToastStyle;
 
 /**
- TapSdkToast is an Objective-C category that adds toast notifications to the UIView
- object class. It is intended to be simple, lightweight, and easy to use. Most
- toast notifications can be triggered with a single line of code.
- 
+ TapSdkToast is an Objective-C category that adds toast notifications to the
+ UIView object class. It is intended to be simple, lightweight, and easy to use.
+ Most toast notifications can be triggered with a single line of code.
+
  The `makeTapSdkToast:` methods create a new view and then display it as toast.
- 
+
  The `showTapSdkToast:` methods display any view as toast.
- 
+
  */
 @interface UIView (TapSdkToast)
 
 /**
  Creates and presents a new toast view with a message and displays it with the
  default duration and position. Styled using the shared style.
- 
+
  @param message The message to be displayed
  */
 - (void)makeTapSdkToast:(NSString *)message;
@@ -54,63 +54,61 @@ extern const NSString * CSTapSdkToastPositionBottom;
 /**
  Creates and presents a new toast view with a message. Duration and position
  can be set explicitly. Styled using the shared style.
- 
+
  @param message The message to be displayed
  @param duration The toast duration
- @param position The toast's center point. Can be one of the predefined CSTapSdkToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ @param position The toast's center point. Can be one of the predefined
+ CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  */
-- (void)makeTapSdkToast:(NSString *)message
-         duration:(NSTimeInterval)duration
-         position:(id)position;
+- (void)makeTapSdkToast:(NSString *)message duration:(NSTimeInterval)duration position:(id)position;
 
 /**
  Creates and presents a new toast view with a message. Duration, position, and
  style can be set explicitly.
- 
+
  @param message The message to be displayed
  @param duration The toast duration
- @param position The toast's center point. Can be one of the predefined CSTapSdkToastPosition
- constants or a `CGPoint` wrapped in an `NSValue` object.
+ @param position The toast's center point. Can be one of the predefined
+ CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  @param style The style. The shared style will be used when nil
  */
 - (void)makeTapSdkToast:(NSString *)message
-         duration:(NSTimeInterval)duration
-         position:(id)position
-            style:(CSTapSdkToastStyle *)style;
+               duration:(NSTimeInterval)duration
+               position:(id)position
+                  style:(CSTapSdkToastStyle *)style;
 
 /**
- Creates and presents a new toast view with a message, title, and image. Duration,
- position, and style can be set explicitly. The completion block executes when the
- toast view completes. `didTap` will be `YES` if the toast view was dismissed from 
- a tap.
- 
+ Creates and presents a new toast view with a message, title, and image.
+ Duration, position, and style can be set explicitly. The completion block
+ executes when the toast view completes. `didTap` will be `YES` if the toast
+ view was dismissed from a tap.
+
  @param message The message to be displayed
  @param duration The toast duration
- @param position The toast's center point. Can be one of the predefined CSTapSdkToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ @param position The toast's center point. Can be one of the predefined
+ CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  @param title The title
  @param image The image
  @param style The style. The shared style will be used when nil
- @param completion The completion block, executed after the toast view disappears.
-                   didTap will be `YES` if the toast view was dismissed from a tap.
+ @param completion The completion block, executed after the toast view
+ disappears. didTap will be `YES` if the toast view was dismissed from a tap.
  */
 - (void)makeTapSdkToast:(NSString *)message
-         duration:(NSTimeInterval)duration
-         position:(id)position
-            title:(NSString *)title
-            image:(UIImage *)image
-            style:(CSTapSdkToastStyle *)style
-       completion:(void(^)(BOOL didTap))completion;
+               duration:(NSTimeInterval)duration
+               position:(id)position
+                  title:(NSString *)title
+                  image:(UIImage *)image
+                  style:(CSTapSdkToastStyle *)style
+             completion:(void (^)(BOOL didTap))completion;
 
 /**
  Creates a new toast view with any combination of message, title, and image.
- The look and feel is configured via the style. Unlike the `makeTapSdkToast:` methods,
- this method does not present the toast view automatically. One of the showTapSdkToast:
- methods must be used to present the resulting view.
- 
+ The look and feel is configured via the style. Unlike the `makeTapSdkToast:`
+ methods, this method does not present the toast view automatically. One of the
+ showTapSdkToast: methods must be used to present the resulting view.
+
  @warning if message, title, and image are all nil, this method will return nil.
- 
+
  @param message The message to be displayed
  @param title The title
  @param image The image
@@ -118,28 +116,29 @@ extern const NSString * CSTapSdkToastPositionBottom;
  @return The newly created toast view
  */
 - (UIView *)tapSdkToastViewForMessage:(NSString *)message
-                          title:(NSString *)title
-                          image:(UIImage *)image
-                          style:(CSTapSdkToastStyle *)style;
+                                title:(NSString *)title
+                                image:(UIImage *)image
+                                style:(CSTapSdkToastStyle *)style;
 
 /**
- Hides the active toast. If there are multiple toasts active in a view, this method
- hides the oldest toast (the first of the toasts to have been presented).
- 
+ Hides the active toast. If there are multiple toasts active in a view, this
+ method hides the oldest toast (the first of the toasts to have been presented).
+
  @see `hideAllTapSdkToasts` to remove all active toasts from a view.
- 
- @warning This method has no effect on activity toasts. Use `hideTapSdkToastActivity` to
- hide activity toasts.
+
+ @warning This method has no effect on activity toasts. Use
+ `hideTapSdkToastActivity` to hide activity toasts.
  */
 - (void)hideTapSdkToast;
 
 /**
  Hides an active toast.
- 
- @param toast The active toast view to dismiss. Any toast that is currently being displayed
- on the screen is considered active.
- 
- @warning this does not clear a toast view that is currently waiting in the queue.
+
+ @param toast The active toast view to dismiss. Any toast that is currently
+ being displayed on the screen is considered active.
+
+ @warning this does not clear a toast view that is currently waiting in the
+ queue.
  */
 - (void)hideTapSdkToast:(UIView *)toast;
 
@@ -149,31 +148,38 @@ extern const NSString * CSTapSdkToastPositionBottom;
 - (void)hideAllTapSdkToasts;
 
 /**
- Hides all active toast views, with options to hide activity and clear the queue.
- 
- @param includeActivity If `true`, toast activity will also be hidden. Default is `false`.
- @param clearQueue If `true`, removes all toast views from the queue. Default is `true`.
+ Hides all active toast views, with options to hide activity and clear the
+ queue.
+
+ @param includeActivity If `true`, toast activity will also be hidden. Default
+ is `false`.
+ @param clearQueue If `true`, removes all toast views from the queue. Default is
+ `true`.
  */
 - (void)hideAllTapSdkToasts:(BOOL)includeActivity clearQueue:(BOOL)clearQueue;
 
 /**
- Removes all toast views from the queue. This has no effect on toast views that are
- active. Use `hideAllTapSdkToasts` to hide the active toasts views and clear the queue.
+ Removes all toast views from the queue. This has no effect on toast views that
+ are active. Use `hideAllTapSdkToasts` to hide the active toasts views and clear
+ the queue.
  */
 - (void)clearTapSdkToastQueue;
 
 /**
- Creates and displays a new toast activity indicator view at a specified position.
- 
- @warning Only one toast activity indicator view can be presented per superview. Subsequent
- calls to `makeTapSdkToastActivity:` will be ignored until hideTapSdkToastActivity is called.
- 
- @warning `makeTapSdkToastActivity:` works independently of the showTapSdkToast: methods. TapSdkToast activity
- views can be presented and dismissed while toast views are being displayed. `makeTapSdkToastActivity:`
- has no effect on the queueing behavior of the showTapSdkToast: methods.
- 
- @param position The toast's center point. Can be one of the predefined CSTapSdkToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ Creates and displays a new toast activity indicator view at a specified
+ position.
+
+ @warning Only one toast activity indicator view can be presented per superview.
+ Subsequent calls to `makeTapSdkToastActivity:` will be ignored until
+ hideTapSdkToastActivity is called.
+
+ @warning `makeTapSdkToastActivity:` works independently of the showTapSdkToast:
+ methods. TapSdkToast activity views can be presented and dismissed while toast
+ views are being displayed. `makeTapSdkToastActivity:` has no effect on the
+ queueing behavior of the showTapSdkToast: methods.
+
+ @param position The toast's center point. Can be one of the predefined
+ CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  */
 - (void)makeTapSdkToastActivity:(id)position;
 
@@ -184,39 +190,39 @@ extern const NSString * CSTapSdkToastPositionBottom;
 
 /**
  Displays any view as toast using the default duration and position.
- 
+
  @param toast The view to be displayed as toast
  */
 - (void)showTapSdkToast:(UIView *)toast;
 
 /**
- Displays any view as toast at a provided position and duration. The completion block 
- executes when the toast view completes. `didTap` will be `YES` if the toast view was 
- dismissed from a tap.
- 
+ Displays any view as toast at a provided position and duration. The completion
+ block executes when the toast view completes. `didTap` will be `YES` if the
+ toast view was dismissed from a tap.
+
  @param toast The view to be displayed as toast
  @param duration The notification duration
- @param position The toast's center point. Can be one of the predefined CSTapSdkToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
- @param completion The completion block, executed after the toast view disappears.
-                   didTap will be `YES` if the toast view was dismissed from a tap.
+ @param position The toast's center point. Can be one of the predefined
+ CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
+ @param completion The completion block, executed after the toast view
+ disappears. didTap will be `YES` if the toast view was dismissed from a tap.
  */
 - (void)showTapSdkToast:(UIView *)toast
-         duration:(NSTimeInterval)duration
-         position:(id)position
-       completion:(void(^)(BOOL didTap))completion;
+               duration:(NSTimeInterval)duration
+               position:(id)position
+             completion:(void (^)(BOOL didTap))completion;
 
 @end
 
 /**
- `CSTapSdkToastStyle` instances define the look and feel for toast views created via the 
- `makeTapSdkToast:` methods as well for toast views created directly with
- `toastViewForMessage:title:image:style:`.
- 
- @warning `CSTapSdkToastStyle` offers relatively simple styling options for the default
- toast view. If you require a toast view with more complex UI, it probably makes more
- sense to create your own custom UIView subclass and present it with the `showTapSdkToast:`
- methods.
+ `CSTapSdkToastStyle` instances define the look and feel for toast views created
+ via the `makeTapSdkToast:` methods as well for toast views created directly
+ with `toastViewForMessage:title:image:style:`.
+
+ @warning `CSTapSdkToastStyle` offers relatively simple styling options for the
+ default toast view. If you require a toast view with more complex UI, it
+ probably makes more sense to create your own custom UIView subclass and present
+ it with the `showTapSdkToast:` methods.
  */
 @interface CSTapSdkToastStyle : NSObject
 
@@ -242,22 +248,23 @@ extern const NSString * CSTapSdkToastPositionBottom;
 @property (assign, nonatomic) CGFloat maxWidthPercentage;
 
 /**
- A percentage value from 0.0 to 1.0, representing the maximum height of the toast
- view relative to it's superview. Default is 0.8 (80% of the superview's height).
+ A percentage value from 0.0 to 1.0, representing the maximum height of the
+ toast view relative to it's superview. Default is 0.8 (80% of the superview's
+ height).
  */
 @property (assign, nonatomic) CGFloat maxHeightPercentage;
 
 /**
- The spacing from the horizontal edge of the toast view to the content. When an image
- is present, this is also used as the padding between the image and the text.
- Default is 10.0.
+ The spacing from the horizontal edge of the toast view to the content. When an
+ image is present, this is also used as the padding between the image and the
+ text. Default is 10.0.
  */
 @property (assign, nonatomic) CGFloat horizontalPadding;
 
 /**
- The spacing from the vertical edge of the toast view to the content. When a title
- is present, this is also used as the padding between the title and the message.
- Default is 10.0.
+ The spacing from the vertical edge of the toast view to the content. When a
+ title is present, this is also used as the padding between the title and the
+ message. Default is 10.0.
  */
 @property (assign, nonatomic) CGFloat verticalPadding;
 
@@ -366,10 +373,10 @@ extern const NSString * CSTapSdkToastPositionBottom;
 
 /**
  Sets the shared style on the singleton. The shared style is used whenever
- a `makeTapSdkToast:` method (or `tapSdkToastViewForMessage:title:image:style:`) is called
- with with a nil style. By default, this is set to `CSTapSdkToastStyle`'s default
- style.
- 
+ a `makeTapSdkToast:` method (or `tapSdkToastViewForMessage:title:image:style:`)
+ is called with with a nil style. By default, this is set to
+ `CSTapSdkToastStyle`'s default style.
+
  @param sharedStyle the shared style
  */
 + (void)setSharedStyle:(CSTapSdkToastStyle *)sharedStyle;
@@ -377,14 +384,14 @@ extern const NSString * CSTapSdkToastPositionBottom;
 /**
  Gets the shared style from the singlton. By default, this is
  `CSTapSdkToastStyle`'s default style.
- 
+
  @return the shared style
  */
 + (CSTapSdkToastStyle *)sharedStyle;
 
 /**
  Enables or disables tap to dismiss on toast views. Default is `YES`.
- 
+
  @param tapToDismissEnabled YES or NO
  */
 + (void)setTapToDismissEnabled:(BOOL)tapToDismissEnabled;
@@ -392,7 +399,7 @@ extern const NSString * CSTapSdkToastPositionBottom;
 /**
  Returns `YES` if tap to dismiss is enabled, otherwise `NO`.
  Default is `YES`.
- 
+
  @return BOOL YES or NO
  */
 + (BOOL)isTapToDismissEnabled;
@@ -403,7 +410,7 @@ extern const NSString * CSTapSdkToastPositionBottom;
  views will appear at the same time (potentially overlapping depending
  on their positions). This has no effect on the toast activity view,
  which operates independently of normal toast views. Default is `NO`.
- 
+
  @param queueEnabled YES or NO
  */
 + (void)setQueueEnabled:(BOOL)queueEnabled;
@@ -411,7 +418,7 @@ extern const NSString * CSTapSdkToastPositionBottom;
 /**
  Returns `YES` if the queue is enabled, otherwise `NO`.
  Default is `NO`.
- 
+
  @return BOOL
  */
 + (BOOL)isQueueEnabled;
@@ -420,14 +427,14 @@ extern const NSString * CSTapSdkToastPositionBottom;
  Sets the default duration. Used for the `makeTapSdkToast:` and
  `showTapSdkToast:` methods that don't require an explicit duration.
  Default is 3.0.
- 
+
  @param duration The toast duration
  */
 + (void)setDefaultDuration:(NSTimeInterval)duration;
 
 /**
  Returns the default duration. Default is 3.0.
- 
+
  @return duration The toast duration
 */
 + (NSTimeInterval)defaultDuration;
@@ -436,7 +443,7 @@ extern const NSString * CSTapSdkToastPositionBottom;
  Sets the default position. Used for the `makeTapSdkToast:` and
  `showTapSdkToast:` methods that don't require an explicit position.
  Default is `CSTapSdkToastPositionBottom`.
- 
+
  @param position The default center point. Can be one of the predefined
  CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  */
@@ -444,7 +451,7 @@ extern const NSString * CSTapSdkToastPositionBottom;
 
 /**
  Returns the default toast position. Default is `CSTapSdkToastPositionBottom`.
- 
+
  @return position The default center point. Will be one of the predefined
  CSTapSdkToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  */

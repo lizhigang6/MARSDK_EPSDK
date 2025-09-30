@@ -22,8 +22,6 @@ typedef NS_ENUM(NSUInteger, TapTapSDKProjectType) {
 
 @interface TapTapSDKLogConfiguration : NSObject
 
-
-
 /// 获取公共基础埋点参数
 + (NSDictionary *)getCommonBaseParameters;
 
