@@ -35,9 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param ids
 /// @param block 返回数据blcok
 + (void)initWithGameAppId:(NSString *)ids FinishBlock:(void (^)(NSDictionary *returnDic, NSError *error))block;
-//获取系统时间
+// 获取系统时间
 + (NSString *)getCstSync:(NSString *)time error:(NSError **)error;
-
 
 /// 版本更新
 /// @param ids <#ids description#>
